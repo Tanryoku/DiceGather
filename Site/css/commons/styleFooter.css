@@ -1,0 +1,37 @@
+/*footer simple avec fond noir */
+
+footer{
+    background-color: black;
+    color: #ffffff;
+}
+
+footer #legals{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer #RS{
+    text-align-last: center;
+}
+
+#RS a{
+    color: orange;
+    text-decoration: none;
+}
+
+#RS a:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    footer{
+        display: flex;
+        align-items: center;
+    }
+
+    #legals{
+        margin:  2% 10%; /* séparer légèrement le bloc mentions légales et réseaux. + légère marge pour épurer */
+    }
+}

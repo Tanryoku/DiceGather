@@ -1,0 +1,126 @@
+/* Le reset en premier pour nonifier border,padding et les list-type*/
+@import url(./commons/reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(./commons/normalize.css);
+/* Importation des polices */
+@import url(./commons/font.css);
+/* style header */
+@import url(./commons/styleHeader_signedIn.css);
+/* style footer */
+@import url(./commons/styleFooter.css);
+
+
+
+/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
+:root {
+    --blanc_casse : #F3e2c5;
+    --marron : #420d09;
+    --orange : #FFB11C;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-table{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 3% 3%;
+}
+
+.img-container{
+    width: 30%;
+    height: auto;
+}
+
+.img-container img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+
+h1{
+    font-family: 'BlackChancery';
+}
+
+#sumup-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1em;
+    padding: 1.5% 1.5%;
+    max-height: 100px; /* non relative size pour empêcher l'agrandissement de la div */
+    overflow-y: auto; 
+    margin: 5% 2%;
+}
+
+#sumup-container h2{
+    font-family: Morris;
+    color: red;
+}
+
+#chat-container {
+
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.3), -4px -4px 5px rgba(0, 0, 0, 0.3);
+    /* Bordure solid pour le contraste */
+    border: 1px solid #fff;
+    border-radius: 1em;
+    padding: 1rem;
+    /* Max-height + overflow pour créer un bloc fixe avec scrolling */
+    max-height: 20rem;
+    overflow-y: auto;
+    margin: 2%;
+    width:80%;
+}
+
+  /* Indenter pour comprendre que cela fait partie du chat */
+
+
+    .message{
+        margin: 3% 1%;
+    }
+    .message .username{
+        color: var(--orange);
+        font-style: italic;
+        font-size: 1em;
+    }
+
+    .message .content{
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1em;
+        line-height: 1.6em;
+        word-wrap: break-word;
+        /* For 2 lines */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+    }
+
+    .message:nth-child(even) .content,     .message:nth-child(even) .username{
+        text-align: right;
+    }
+
+#joueurs-presents{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2%;
+    overflow-x: auto;
+}
+
+#joueurs-presents div{
+    width: 12%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 14px;
+}

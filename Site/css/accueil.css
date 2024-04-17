@@ -1,0 +1,161 @@
+/* Le reset en premier pour nonifier border,padding et les list-type*/
+@import url(./commons/reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(./commons/normalize.css);
+/* Importation des polices */
+@import url(./commons/font.css);
+/* style header */
+@import url(./commons/styleHeader.css);
+/* style footer */
+@import url(./commons/styleFooter.css);
+
+
+
+
+/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
+:root {
+    --blanc_casse : #F3e2c5;
+    --marron : #420d09;
+    --orange : #FFB11C;
+}
+
+/* Difficulté à ajuster le footer, facilite son positionnement en fin de page */
+html, body{
+    min-height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    background-image: url(../assets/Img/fond_accueil_petit.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 0;
+}
+
+/* marges et padding pour aérer le texte */
+main div{
+    border: 3px solid black;
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+    width: 65%;
+    height: auto;
+    margin: 7.5% 10%;
+    padding: 2% 2%;
+    text-align: center;
+}
+
+main div h2, main div p{
+    margin: 3% 0;
+}
+
+h2{
+    font-family: Morris;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main div:first-of-type{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+main div:last-of-type{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+main div:last-of-type h2, main div:last-of-type p{
+    color: black;
+}
+
+main div:last-child p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+main h1, main a{
+    font-family: 'BlackChancery';
+    text-align: center;
+}
+
+main a{
+    width: 50%;
+    height: 20vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main a:hover{
+    background-color: var(--orange);
+    transition: 0.2s ease-in-out;
+    color: var(--marron);
+}
+
+main div, main a{
+    border-radius:7vw;
+}
+
+
+@media screen and (min-width : 768px) {
+    main div{
+        margin: 8% 0%;
+    }
+}
+
+    @media screen and (min-width : 1024px) {
+        main{
+            background-image: url(../assets/Img/fond_accueil.jpg);
+        }
+
+        main div{
+            margin: 5% 10%;
+        }
+
+        main a{
+            font-size: 1.5vw;
+            margin: 2.5% 15%;
+            width: 30%;
+            height: 10vh;
+        }
+
+    }
+
+
+
+/****************************************
+Page retour accueil après inscription
+ ****************************************/
+
+#retour{
+    width: 50%;
+    height: 10vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 5vw;
+    font-family: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+#retour:hover{
+    background-color: var(--orange);
+    transition: 0.2s ease-in-out;
+    color: var(--marron);
+}

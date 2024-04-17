@@ -1,0 +1,64 @@
+/* Le reset en premier pour nonifier border,padding et les list-type*/
+@import url(./commons/reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(./commons/normalize.css);
+/* Importation des polices */
+@import url(./commons/font.css);
+/* style header */
+@import url(./commons/styleHeader_signedIn.css);
+/* style footer */
+@import url(./commons/styleFooter.css);
+
+
+
+/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
+:root {
+    --blanc_casse : #F3e2c5;
+    --marron : #420d09;
+    --orange : #FFB11C;
+}
+
+main{
+    background-color: var(--marron);
+    display: flex;
+    flex-direction: row; /* revient à la ligne grâce au wrap, et permet de rendre le desktop responsif juste en gérant les tailles. */
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 75vh;
+}
+
+main a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 15%;
+    margin:  8% 10%;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: Morris;
+    font-size: 8vw;
+
+    &:hover{
+        background-color: orange;
+        color: var(--marron);
+        transition: 0.2s;
+    };
+}
+
+@media screen and (min-width : 768px) {
+
+    main{
+        margin-top: 10% ; /* centrer les blocs pour rendre le visuel plus naturel malgré l'absence de header */
+        align-content: baseline;
+    }
+
+    
+    main a{
+        font-size: 3vw;
+        margin: 6% 10%;
+        width: 30%;
+        height: 25%;
+    }
+}

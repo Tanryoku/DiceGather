@@ -1,0 +1,210 @@
+/* Le reset en premier pour nonifier border,padding et les list-type*/
+@import url(./commons/reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(./commons/normalize.css);
+/* Importation des polices */
+@import url(./commons/font.css);
+/* style header */
+@import url(./commons/styleHeader.css);
+/* style footer */
+@import url(./commons/styleFooter.css);
+
+
+/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
+:root {
+    --blanc_casse : #F3e2c5;
+    --marron : #420d09;
+    --orange : #FFB11C;
+}
+
+main *{
+    color: var(--blanc_casse);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4.5vw;
+}
+
+main{
+    background-color: var(--marron);
+
+}
+ /************* 
+ page Login
+  *************/
+main section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-container{
+    display: flex;
+    flex-direction: column;
+}
+
+main form div{
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0% 0%;
+    margin: 7.5% 0;
+    border-radius: 1em;
+    align-items: center;
+}
+
+#password-container{
+    margin-top: 0%;
+}
+
+main form div label{
+    padding: 5% 0;
+}
+
+#username-container label, #password-container label{
+    font-family: Morris;
+}
+
+#username-container input, #password-container input, #sign-up_form div input{
+    margin: 10% 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#forgotpw{
+    margin-bottom: 5%;
+}
+
+main button{
+    width: 50%;
+    height: 10vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 5vw;
+    font-family: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+main button:hover{
+    background-color: var(--orange);
+    transition: 0.2s ease-in-out;
+    color: var(--marron);
+}
+
+#mdpOublie{
+    margin: 2%;
+}
+
+#mdpOublie:hover{
+    color: #FFB11C;
+}
+
+/************
+Page Sign-up
+ ************/
+
+ #sign-up{
+    background-image: url(../assets/img/contrat_sml.jpg);
+    width: 100vw;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#overlay_black{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#sign-up_form{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+#sign-up_form div{
+    flex-direction: row;
+    width: 90%;
+}
+
+#sign-up_form div label{
+    padding: 0 5%;
+    font-size: 3.5vw;
+}
+
+#sign-up_form div input{
+margin: 0 5%;
+}
+
+
+@media screen and (min-width : 768px) {
+
+    main *{
+        font-size: 1.5vw;
+    }
+
+    main{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    main section form{
+        width: 100%;
+        height: 100%;
+        margin: 0% 0;
+    }
+
+    main form div{
+        width: 40%;
+        height: 6%;
+        margin: 8% 0;
+        justify-content: space-between;
+    }
+
+    main form div label{
+        font-size: 2vw;
+        padding: 3% 0;
+    }
+
+    #username-container input, #password-container input{
+        margin: 3% 0;
+    }
+
+    main button{
+        font-size: 2vw;
+        padding: 0 8%;
+        width: unset;
+        height: 5vw ;
+    }
+
+    #sign-up form div{
+        width: 30%;
+        justify-content: center;
+        margin: 1.5% 1%;
+    }
+
+    #sign-up form div label{
+        font-size: 1vw;
+    }
+
+}
+
+@media screen and (min-width : 1024px) {
+    main form div{
+        width: 40%;
+        justify-content: space-between;
+        margin: 5% 0;
+    }
+    main form div label{
+        font-size: 2.5vw;
+        padding: 3% 0;
+    }
+}

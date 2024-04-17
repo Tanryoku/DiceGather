@@ -1,0 +1,395 @@
+/* Le reset en premier pour nonifier border,padding et les list-type*/
+@import url(./commons/reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(./commons/normalize.css);
+/* Importation des polices */
+@import url(./commons/font.css);
+/* style header */
+@import url(./commons/styleHeader_signedIn.css);
+/* style footer */
+@import url(./commons/styleFooter.css);
+
+
+
+/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
+:root {
+    --blanc_casse : #F3e2c5;
+    --marron : #420d09;
+    --orange : #FFB11C;
+}
+
+main *{
+    color: black;
+}
+
+main{
+    width: 100vw;
+}
+
+main section{
+    /* version 640px de l'image */
+    background-image: url(../assets/Img/parcho-profil_sml.jpg);
+    background-repeat: no-repeat;
+    background-size: 175%;
+    background-position: center center;
+    margin: 10% 4%;
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7vw;
+}
+
+main section *{
+    margin:  0% 3%;
+    /* Aérer l'intérieur de la section en "décollant" les blocks des bords */
+}
+
+main div{
+    margin: 1% 0;
+}
+
+#profile{
+    display: flex;
+    flex-direction: row;
+}
+
+#profile h3{
+    margin-left: 25%;
+}
+
+main label, h3{
+    font-family: 'BlackChancery';
+    font-size: 1em;
+}
+
+main input {
+    color: white;
+}
+
+#input-container{
+    margin: 2% 3%;
+}
+
+#profile-pic-container{
+    width: 6em;
+    height: auto;
+}
+
+#profile-pic-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#descriptions label{
+    font-family: 'Morris';
+}
+
+#profile div{
+    display: flex;
+    flex-direction: row;
+}
+
+#jeux-container{
+    margin-right: 10%;
+}
+
+#other{
+    display: none;
+}
+
+#descriptions {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+#descriptions label {
+    /* Aligner le label légèrement au dessus du textarea, et laisser un espace entre les deux */
+    margin: 3% 4%;
+}
+
+main textarea, input {
+
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5%;
+    font-size: 0.75em;
+    color: white;
+}
+
+#city, #age{
+    width: 10em;
+    padding: 0.3em;
+    font-size: 1em;
+    appearance: none;
+}
+
+#age{
+    width: 4em;
+}
+
+#descriptions textarea::placeholder, input::placeholder {
+    color: #e9e9e9;
+    font-style: italic;
+}
+
+/* Page Recherche */
+
+    /* la barre de recherche */
+
+
+#filter-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+#filter-container label {
+    color: white;
+}
+
+#table-filters, #player-filters{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+#table-filters input, #player-filters input{
+    width: 100%;
+}
+    /*pour faciliter le JS, on a juste à remove/add (toggle) une class pour gérer l'apparition, disparition des documents */
+.hidden{
+    display:none;
+}
+
+/* Les profiles qui apparaissent */
+
+#profile-recherche{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 95%;
+    height: auto;
+    margin: 1% 2.5%;
+    padding: 2% 0%;
+
+}
+
+#profile-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#infos-profile h1{
+    font-size: large;
+    font-family: 'BlackChancery';
+}
+
+.profile-pic-container{
+    width: 9em;
+    height: auto;
+    margin: 0% 1%;
+}
+
+.profile-pic-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile #profile-pic-container{
+    width: 6em;
+    height: auto;
+}
+
+.profile #profile-pic-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.div-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#infos{
+    display: flex;
+    flex-direction: column;
+}
+
+main p{
+    font-size: 0.7em;
+}
+
+#bubble-desktop{
+    display: none;
+}
+
+@media screen and (min-width : 767px) and (max-width : 1023px) {
+
+    /* Page Profil */
+
+    #profile-container, #profile-recherche {
+        /* version 1240px de l'image */
+        background-image: url(../assets/Img/parcho-profil_big.jpg);
+        background-size: 150%;
+    }
+
+    .profile-pic-container img{
+        max-height: 20vh;
+        object-fit: cover;
+        margin: 0 1% 0 0;
+    }
+
+    /* On place l'avatar en bas de la colonne des infos et on adapte le texte pour qu'il soit sur une seule ligne */    
+    /* On place le nom et la description en dessous de l'image, au lieu à coté */
+    #infos{
+        order: 3;
+        align-self: end;
+        text-align: left;
+        padding-left: 5%;
+    }
+
+    #infos-profile{
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    main label, h3{
+        font-size: 1em;
+    }
+
+    #input-container{
+        display: block;
+    }
+    #input-container input{
+        margin: 0 1%;
+    }
+
+    main textarea, input {
+        font-size: 1.5em;
+    }
+    #profile-pic-container{
+        width: 10em;
+        height: auto;
+    }
+    #input-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*
+    *************** 
+    page recherche
+    ***************
+    */
+
+    #category{
+        width: 40%;
+    }
+
+    #profile-name{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        margin: 0 1% 0 8%;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    main h1{
+        font-size: 1.5em;
+    }
+    #input-container p{
+        font-size: 0.9em;
+    }
+    #descriptions textarea::placeholder, input::placeholder {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+
+    #profile-container, #profile-recherche{
+        /* version 1240px de l'image */
+        background-image: url(../assets/Img/parcho-profil_big.jpg);
+        background-size: 120%;
+        margin: 0% 2%;
+    }
+
+    #category{
+        width: 40%;
+    }
+
+    main label, h3{
+        font-family: 'BlackChancery';
+        font-size: 1.2em;
+    }
+
+    #profile{
+        justify-content: space-between;
+    }
+
+    #infos-profile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #infos-profile div{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: center;
+            margin: 0 0;
+    }
+
+    #descriptions label {
+        margin: 2% 4%;
+    }
+
+    main textarea, input {
+        font-size: 0.8em;
+    }
+
+    #jeux-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #jeux{
+        width: 100%;
+    }
+    #jeux p{
+        margin: 0 0;
+    }
+
+    #bubble img{
+        display: none;
+    }
+
+    #bubble_desktop{
+        display:block;
+    }
+}

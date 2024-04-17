@@ -1,0 +1,180 @@
+/* Le reset en premier pour nonifier border,padding et les list-type*/
+@import url(reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(normalize.css);
+/* Importation des polices */
+@import url(font.css);
+
+
+/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
+:root{
+    --blanc_casse : #F3e2c5;
+    --marron : #420d09;
+    --orange : #FFB11C;
+}
+
+/* Placer la police par défaut du site (pour le contenu) */
+*{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        box-sizing: border-box;  /* copié du tuto side bar "https://www.youtube.com/watch?v=dEdwDijoceY&list=PLImJ3umGjxdCjoBGj1eGQwcopR0P0edAK&index=4" à voir si ça gêne pour la suite */
+
+        padding: 0;
+}
+
+body{
+    min-height: 100%;
+    background-color: var(--marron);
+}
+
+
+/********
+    Header
+*********/
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav div:first-of-type{
+    padding: 1vw 0 0 0;
+    margin: 0 0 0 0;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-radius: 10%;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanc_casse);
+
+}
+
+.menu_logo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.image_logo{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.image_logo img{
+    object-fit: cover;
+    max-width: 5vw;
+    max-height: 5vw;
+}
+
+
+.logo .menu-icon{
+    color: #333;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+nav .sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%; /* caché tant que le bouton n'est pas cliqué */
+    height: 100%;
+    width: 20vw;
+    background-color: var(--blanc_casse);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5 ease;
+}
+
+nav.open .sidebar{
+    left:0; /* position après bouton cliqué */
+    transition: ease-in-out 0.2s;
+}
+
+nav.open .sidebar .logo{
+    display: flex;
+    align-content: flex-start;
+}
+
+nav.open .sidebar .image_logo{ /* assurer le ciblage lorsque la classe open est active pour ne pas créer de conflits avec la version fermé. */
+    margin-right: 100%; /* coller l'image à gauche du contenant */
+}
+
+.sidebar-content ul .list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20% 0 0 0;
+    
+}
+
+.sidebar-content ul .list a{
+    width: 80%;
+    height: 20%;
+    border: solid 1px black;
+    border-radius: 1vw;
+    margin: 5% 0 5% 0;
+    padding: 5% 0 5% 0;
+    background-color: var(--blanc_casse); /* même couleur de fond pour le rendre invisible, et simplement faire ressortir le bouton avec les effet de shadow et border */
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) ;
+    border: 2px solid rgba(0, 0, 0, 0.267)
+}
+
+.overlayBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 20%;
+    margin: 10% 0% 10% 0% ;
+    background-color: var(--blanc_casse); /* même couleur de fond pour le rendre invisible, et simplement faire ressortir le bouton avec les effet de shadow et border */
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) ;
+    border: 2px solid rgba(0, 0, 0, 0.267)
+}
+
+.sidebar-content ul .list a:hover{
+    background-color: var(--orange);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: ease 0.5s;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 200%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+/********
+    Main
+*********/
+
+h1{
+    text-align: center;
+    font-family: BlackChancery;
+}
+
+#accueil{
+    background-image: url(../assets/Img/fond_accueil.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}

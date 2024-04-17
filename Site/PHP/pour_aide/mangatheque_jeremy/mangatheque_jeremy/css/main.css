@@ -1,0 +1,29 @@
+main {
+    width: 80%;
+    margin: 18px auto;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-left: red solid 1px;
+    border-right: green solid 1px;
+}
+
+td {
+    padding: 7px;
+}
+
+input,
+textarea,
+button,
+select {
+    display: block;
+    width: 100%;
+
+    margin: 17px auto;
+}

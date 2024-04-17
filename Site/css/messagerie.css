@@ -1,0 +1,47 @@
+/* Le reset en premier pour nonifier border,padding et les list-type*/
+@import url(./commons/reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(./commons/normalize.css);
+/* Importation des polices */
+@import url(./commons/font.css);
+/* style header */
+@import url(./commons/styleHeader_signedIn.css);
+/* style footer */
+@import url(./commons/styleFooter.css);
+
+
+#messageSystem {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#messageArea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+    overflow-y: auto;
+}
+
+#message {
+    margin: 0;
+}
+
+#messageInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#sendButton {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background-color: #0056b3;
+}
