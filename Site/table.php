@@ -16,11 +16,17 @@
                 <img src="./assets/img/profile1.jpg" alt="image profil de table">
              <!-- <img src="<//?php echo $_SESSION['avatar'];?>" alt="Avatar"/> -->
             </div>
-            <h1 id="table-title">
-                Titre Exemple
-                <!-- Table n°<//?php echo $_GET["id"];?> :  
-                <//?php if (isset($_GET["name"])) {echo "\"".$_GET["name"]."\"";} else{echo "Anonyme";}?> -->
-            </h1>
+            <div id="profile-table-droite">
+                <h1 id="table-title">
+                    Titre Exemple
+                    <!-- Table n°<//?php echo $_GET["id"];?> :  
+                    <//?php if (isset($_GET["name"])) {echo "\"".$_GET["name"]."\"";} else{echo "Anonyme";}?> -->
+                </h1>
+                <h2>
+                    MJ : *nom du MJ*
+                </h2>
+            </div>
+
         </div>
         <div id="sumup-container">
             <h2>Je suis le titre du résumé</h2>
@@ -32,32 +38,7 @@
             Recusandae id quibusdam cumque rerum ab dolore! Soluta officia rem exercitationem sunt, ad id provident illum aliquid est cum ipsum dolorem molestiae optio adipisci, aut earum quod debitis nulla aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio soluta eligendi aliquam, possimus inventore illo, doloribus nam explicabo recusandae itaque molestiae sequi sapiente vitae quis? Nesciunt repudiandae similique facilis quisquam.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et in aspernatur a perspiciatis totam consectetur rem soluta velit inventore fugit, adipisci tempore tenetur voluptas, porro similique minima illo, eum reprehenderit.</p>
         </div>
-        <div id="chat-container">
-            <div class="message">
-                <h2 class="username">Username</h2>
-                <p class="content">Lorem ipsum dolor sit amet consectetur adip</p>
-            </div>
-            <div class="message">
-                <h2 class="username">Username</h2>
-                <p class="content">Lorem ipsum dolor sit amet consectetur adip</p>
-            </div>
-            <div class="message">
-                <h2 class="username">Username</h2>
-                <p class="content">Lorem ipsum dolor sit amet consectetur adip</p>
-            </div>
-            <div class="message">
-                <h2 class="username">Username</h2>
-                <p class="content">Lorem ipsum dolor sit amet consectetur anticonstitutionnellement</p>
-            </div>
-            <div class="message">
-                <h2 class="username">Username</h2>
-                <p class="content">Lorem ipsum dolor sit amet consectetur adip</p>
-            </div>
-            <div class="message">
-                <h2 class="username">Username</h2>
-                <p class="content">Lorem ipsum dolor sit amet consectetur adip</p>
-            </div>
-        </div>
+
         <div id="calendrier-container">
             <p>Prochaine session le : 01/01/2011 11:11</p>
         </div>
@@ -68,6 +49,8 @@
             <div class="profil-perso">Je suis le J3</div>
             <div class="profil-perso">Je suis le J4</div>
         </div>
+        <!-- Uniquement visible pour la session MJ -->
+        <a href="tableModif.php">Modifier</a>
     </main>
     <footer>
         <?php include('./include/footer.inc.php'); ?>
