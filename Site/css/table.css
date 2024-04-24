@@ -24,8 +24,11 @@ main, main form{
     justify-content: flex-start;
     align-items: center;
 }
+main form{
+    margin-top: 5%
+}
 
-#profile-table{
+#profileTable{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -33,12 +36,12 @@ main, main form{
 }
 
 
-.img-container{
+.imgContainer{
     width: 30%;
     height: auto;
 }
 
-.img-container img{
+.imgContainer img{
     max-width: 100%;
     max-height: 100%;
     border-radius: 20px;
@@ -48,7 +51,7 @@ h1,h2{
     font-family: 'BlackChancery';
 }
 
-#sumup-container{
+#sumupContainer{
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -56,17 +59,18 @@ h1,h2{
     padding: 1.5% 1.5%;
     max-height: 14em;
     overflow-y: auto; 
-    margin: 10% 2%;
+    margin-bottom: 5%;
     width: 90%;
 }
 
-#sumup-container h2{
+#sumupContainer h2{
     font-family: Morris;
     color: red;
+    margin-bottom: 5%;
 }
 
 
-#joueurs-presents{
+#joueursPresents{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -74,7 +78,7 @@ h1,h2{
     overflow-x: auto;
 }
 
-#joueurs-presents div{
+#joueursPresents div{
     width: 12%;
     height: auto;
     background-color: rgba(0, 0, 0, 0.3);
@@ -85,6 +89,19 @@ h1,h2{
 /* ******************************
 Page de modification d'une table
 ******************************** */
+
+/* Pour l'accessibilité */
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+    white-space: nowrap; /* Ajout pour empêcher le contenu de s'enrouler */
+}
+
 
 form input{
     color: black;
@@ -99,6 +116,15 @@ form #profile-table #img-container{
     flex-direction: column;
     align-items: center;
 }
+
+#titre{
+    margin: 5% 0;
+}
+
+#profileTableDroite h2{
+    margin: 5% 0;
+}
+
 
 form #tableAvatar{
     border-radius: 50%;
@@ -117,6 +143,8 @@ form #tableAvatar input{
     padding: 0;
     width: 100%;
 }
+
+
 #description{
     width: 90%;
     align-self: center;
@@ -140,3 +168,28 @@ form button:hover{
     color: var(--marron);
 }
 
+#calendrierContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#titreDescription{
+    margin: 5% 0;
+}
+
+#calendrierContainer #calendrierHoraire{
+    margin: 10% 0;
+}
+
+@media (min-width: 767px){
+
+    form button{
+        font-size: 2em;
+        width: auto;
+        height: auto;
+        padding: 5%;
+    }
+}

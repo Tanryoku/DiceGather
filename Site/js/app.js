@@ -9,7 +9,6 @@ btnPopNav.addEventListener("click", () => {
 })
 
 
-
 //Pour la page de recherche
 
     //Bar de recherche : choix entre Table, ou MJ / joueur. Le set de filtre change selon table ou MJ/Joueur. Mj/Joueur changera le code php pour différencer le profil appelé.

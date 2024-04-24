@@ -48,11 +48,19 @@ CREATE TABLE IF NOT EXISTS message_prive (
 CREATE TABLE IF NOT EXISTS table_de_jeu(
     id_table INT AUTO_INCREMENT PRIMARY KEY,
     id_user INT,
+    id_MJ INT,
     id_profil INT,
     nom VARCHAR(60) NOT NUll,
     systeme VARCHAR(100) NOT NUll,
-    img VARCHAR(100) ,
+    img VARCHAR(100),
+    titreDescription VARCHAR(50)
+    description TEXT,
+    createdAt DATETIME DEFAULT CURRENT_TIME_STAMP,
+    dateSeance DATETIME,
+
+
     FOREIGN KEY (id_user) REFERENCES `user`(id_user),
+    FOREIGN KEY (id_MJ) REFERENCES `user`(id_user),
     FOREIGN KEY (id_profil) REFERENCES profil_joueur(id_profil)
 )CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB;
 

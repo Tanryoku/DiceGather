@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +15,10 @@
             <div id="profile">
                 <div class="profile-pic-container">
                     <!-- Récupérer l'URL de l'image déjà uploadé -->
-                    <img src="../assets/Img/profile1.jpg" alt="Profile picture" id="profile-picture">
+                    <img src="../assets/Img/profile1.jpg" alt="image de profil" id="profile-picture">
                 </div>
                 <!-- Récupérer le nom utilisateur entré lors de l'inscription -->
-                <h3>*php nom user db*</h3> 
+                <input type="text" name="pseudo" id="pseudo">
             </div>
             <!-- Les informations des divs suivantes sont envoyés dans la table profil lié à l'utilisateur connecté -->
             <div id="infos-profile">
@@ -54,6 +54,8 @@
                 <label for="attentes">Ce qu'est une bonne table pour moi :</label>
                 <textarea name="attentes" id="attentes" cols="5" rows="7" placeholder="décrivez ce qu'est, pour vous, le déroulement idéal d'une partie, le comportement des joueurs, du MJ, comment-vous voulez que les questions sur le système de règlent, etc."></textarea>
             </div>
+
+            <a href="./profilModif.php" id="lienModif">Modifier mon profil</a>
         </section>
     </main>
     <footer>

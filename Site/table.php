@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,16 @@
 </head>
 <body>
     <header>
-        <?php include('./include/header.inc.php'); ?>
+        <?php include('./include/header_signedIn.inc.php'); ?>
     </header>
     <main>
-        <div id="profile-table">
-            <div class="img-container">
+        <div id="profileTable">
+            <div class="imgContainer">
                 <img src="./assets/img/profile1.jpg" alt="image profil de table">
              <!-- <img src="<//?php echo $_SESSION['avatar'];?>" alt="Avatar"/> -->
             </div>
-            <div id="profile-table-droite">
-                <h1 id="table-title">
+            <div id="profileTableDroite">
+                <h1 id="tableTitle">
                     Titre Exemple
                     <!-- Table n°<//?php echo $_GET["id"];?> :  
                     <//?php if (isset($_GET["name"])) {echo "\"".$_GET["name"]."\"";} else{echo "Anonyme";}?> -->
@@ -28,7 +28,7 @@
             </div>
 
         </div>
-        <div id="sumup-container">
+        <div id="sumupContainer">
             <h2>Je suis le titre du résumé</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quas quos necessitatibus distinctio iusto ipsam tempora, laborum, tempore in consequuntur voluptates repellat nulla provident eveniet. Vitae omnis suscipit placeat dolore.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellat accusamus fugit non, labore necessitatibus numquam voluptatum. Eos ipsum cumque ducimus numquam corporis. Nemo odit, voluptas dolor nihil saepe expedita.
             Blanditiis molestiae dignissimos adipisci tenetur sequi aliquid odit unde quo enim id sit esse explicabo harum neque corporis alias laborum vel, molestias iusto, doloremque deserunt, facere laudantium quisquam voluptatem? Dolor?
@@ -39,15 +39,15 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et in aspernatur a perspiciatis totam consectetur rem soluta velit inventore fugit, adipisci tempore tenetur voluptas, porro similique minima illo, eum reprehenderit.</p>
         </div>
 
-        <div id="calendrier-container">
+        <div id="calendrierContainer">
             <p>Prochaine session le : 01/01/2011 11:11</p>
         </div>
-        <div id="joueurs-presents">
-            <div class="profil-perso">Je suis le MJ</div>
-            <div class="profil-perso">Je suis le J1</div>
-            <div class="profil-perso">Je suis le J2</div>
-            <div class="profil-perso">Je suis le J3</div>
-            <div class="profil-perso">Je suis le J4</div>
+        <div id="joueursPresents">
+            <div class="profilPerso">Je suis le MJ</div>
+            <div class="profilPerso">Je suis le J1</div>
+            <div class="profilPerso">Je suis le J2</div>
+            <div class="profilPerso">Je suis le J3</div>
+            <div class="profilPerso">Je suis le J4</div>
         </div>
         <!-- Uniquement visible pour la session MJ -->
         <a href="tableModif.php">Modifier</a>

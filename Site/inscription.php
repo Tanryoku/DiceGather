@@ -18,7 +18,7 @@ if(!empty($_POST)){
 
 
     // Requête SQL :
-    $sql = "INSERT INTO user (nom, prenom, date_de_naissance, ville_de_residence, email, hash) VALUES  (:nom, :prenom, :date_de_naissance, :ville_de_residence, :email, :hash)";
+    $sql = "INSERT INTO user (nom, prenom, date_de_naissance, ville_de_residence, email, hash) VALUES (:nom, :prenom, :date_de_naissance, :ville_de_residence, :email, :hash)";
 
     // Je prépare la requête
     $requete = $connexion->prepare($sql);
@@ -43,8 +43,7 @@ if(!empty($_POST)){
 
         if ($requete->execute()) {
             // Si la requête s'est bien passée, je redirige l'utilisateur vers la page de connexion
-            // header("Location: inscription_ok.php");
-            var_dump($_POST["password"]);
+            header("Location: connexion.php");
         }
     }
 }
@@ -52,7 +51,7 @@ if(!empty($_POST)){
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

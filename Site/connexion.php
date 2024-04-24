@@ -1,6 +1,6 @@
 <?php
 // Traitement
-
+session_start();
 // Les fichiers requis au bon fonctionnement du code :
 include("./PHP/functions.php");
 include("./PHP/BdD_login.php");
@@ -34,7 +34,10 @@ if(!empty($_POST)){
             if (password_verify($_POST["password"], $user['hash'] )) {
             // Le mot de passe correspond
             echo "Connexion réussie!";
-            // Ouvrir une session connecté et rediriger vers TbD
+            // Enregistrer le token connecté dans la session et rediriger vers TdB
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['id'] = $user['id_user'];
+            header('Location: ./TdB.php');
             } else {
             // Le mot de passe ne correspond pas
             echo "Mot de passe incorrect.";
@@ -48,7 +51,7 @@ if(!empty($_POST)){
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,12 +67,12 @@ if(!empty($_POST)){
             <form action="" method="POST">
                 <div id="username-container">
                     <label for="email">Votre adresse e-mail</label>
-                    <input type="text" placeholder="email" id="email" name="email" autocomplete="email">
+                    <input type="text" placeholder="email" id="email" name="email" autocomplete="email" required>
                 </div>
 
                 <div id="password-container">
                     <label for="password">Votre mot de passe</label>
-                    <input type="password" placeholder="mot de passe" id="password" name="password">
+                    <input type="password" placeholder="mot de passe" id="password" name="password" required>
                 </div>
 
                 <button type="submit">Se connecter</button>
