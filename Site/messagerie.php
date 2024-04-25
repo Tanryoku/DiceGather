@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./messagerie.html">
-    <title>Dice Gather</title>
+    <title>Dice Gather - contacter les joueurs et rejoindre une table</title>
 </head>
 <body>
     <header>
-        <?php include('./include/header.inc.php'); ?>
+        <?php include('./include/header_signedIn.inc.php'); ?>
     </header>
     <main>
-        <div id="messageSystem">
+        <section id="messageSystem">
+            <h1>messagerie</h1>
             <ul id="tabs">
                 <li id="receivedTab">Received</li>
                 <li id="sentTab">Sent</li>
@@ -32,7 +33,7 @@
                 <input id="messageInput" type="text" placeholder="Type a message...">
                 <button id="sendButton">Send</button>
             </div>
-        </div>
+        </section>
             <script src="script.js"></script>
     </main>
     <footer>

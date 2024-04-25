@@ -36,7 +36,6 @@
 
             // Condition pour choisir la bonne requête à effectuer
             if ($count > 0) {
-                die("je suis dans l'update");
                 // Si les colonnes existent, je met à jour la table.
                 $sql = "UPDATE table_de_jeu SET titre = :titre, systeme = :systeme, titreDescription = :titreDescription, description = :description, dateSeance = :dateSeance, lieuSeance = :lieuSeance";
 

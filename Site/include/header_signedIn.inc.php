@@ -45,7 +45,7 @@ include("./PHP/BdD_login.php");
                 <p id="title">Dice Gather</p>
                 <ul id="signed-in">
                     <div id="header-up">
-                        <a href="profil.php">Profil</a>
+                        <a href="profilJoueur.php">Profil</a>
                         <a href="messagerie.php"> Messagerie</a>
                         <a href="recherche.php"> Recherche</a>
                         <a href="mesTables.php">Mes Tables</a>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--urlset = c'est l'élément racine qui va contenir toutes nos urls
+    Il permet de rattacher le fichier au protocole sitemap.org-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!--Url de chaque page à indexer-->
+   <url>
+
+      <!--loc = précise l'url de la page-->
+      <loc>https://www.placeholder.fr/</loc>
+
+      <!--lastmod = la date de la dernière modification -->
+      <lastmod>2024-04-24</lastmod>
+
+      <!--Balise Facultative et pas forcément prise en compte par Google -->
+
+      <!--changefreq = une estimation de la fréquence des modifications que vous 
+        ferez sur cette page -->
+      <changefreq>daily</changefreq>
+
+      <!--priority = L'importance de cette page par rapport aux autres
+        c'est une echelle entre 0.0 à 1.0 -->
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>https://www.DiceGather.fr/index</loc>
+      <lastmod>2024-04-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://www.DiceGather.fr/connexion</loc>
+      <lastmod>2024-04-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+      <url>
+      <loc>https://www.DiceGather.fr/inscription</loc>
+      <lastmod>2024-04-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+      <url>
+      <loc>https://www.DiceGather.fr/profil</loc>
+      <lastmod>2024-04-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+      <url>
+      <loc>https://www.DiceGather.fr/profilModif</loc>
+      <lastmod>2024-04-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <url>
+      <loc>https://www.DiceGather.fr/recherche</loc>
+      <lastmod>2024-04-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+      <url>
+      <loc>https://www.DiceGather.fr/</loc>
+      <lastmod>2024-04-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+</urlset>

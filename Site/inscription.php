@@ -60,7 +60,8 @@ if(!empty($_POST)){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/sign-in_sign-up.css">
-    <title>Dice Gather</title>
+    <title>Dice Gather - rejoindre les rôlistes</title>
+    <meta name="description" content="Trouvez des compagnons en rejoignant la commnauté de Dice Gather">
 </head>
 <body>
     <header>
@@ -68,6 +69,7 @@ if(!empty($_POST)){
     </header>
     <main>
         <section id="sign-up">
+            <h1>inscription</h1>
             <div id="overlay_black"></div>
             <form action="inscription" id="sign-up_form" method="POST" enctype="multipart/form-data">
                 <div id="nom_container">

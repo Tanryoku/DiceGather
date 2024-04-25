@@ -40,7 +40,7 @@
                 $_SESSION["user"] = $resultat->username;
 
                 // rediriger vers une page (tableau de bord, compte, accueil, etc...)
-                header("Location: inscription.php");
+                header("Location: rejoindreRoliste.php");
 
             }
         }

@@ -37,7 +37,7 @@ if(!empty($_POST)){
             // Enregistrer le token connecté dans la session et rediriger vers TdB
             $_SESSION['email'] = $user['email'];
             $_SESSION['id'] = $user['id_user'];
-            header('Location: ./TdB.php');
+            header('Location: ./dashboard.php');
             } else {
             // Le mot de passe ne correspond pas
             echo "Mot de passe incorrect.";
@@ -56,7 +56,7 @@ if(!empty($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/sign-in_sign-up.css">
-    <title>Dice Gather</title>
+    <title>Dice Gather - connexion</title>
 </head>
 <body>
     <header>
@@ -64,6 +64,7 @@ if(!empty($_POST)){
     </header>
     <main>
         <section>
+            <h1>Connexion</h1>
             <form action="" method="POST">
                 <div id="username-container">
                     <label for="email">Votre adresse e-mail</label>

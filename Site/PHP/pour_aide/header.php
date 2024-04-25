@@ -26,7 +26,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="inscription.php" class="nav-link">Créer un compte</a>
+                        <a href="rejoindreRoliste.php" class="nav-link">Créer un compte</a>
                     </li>
 
                     <?php 

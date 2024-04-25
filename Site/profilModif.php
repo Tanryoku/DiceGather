@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice Gather</title>
+    <title>Dice Gather - modifier ou effacer ses informations</title>
     <link rel="stylesheet" href="./css/profil_recherche_mesTables.css">
 </head>
 <body>
@@ -12,6 +12,7 @@
     </header>
     <main>
         <form id="profile-container" action="./actionModifProfile.php" method="POST">
+            <h1>Informations du profil</h1>
             <div id="profile">
                 <div class="profile-pic-container">
                         <!-- Récupérer l'URL de l'image déjà uploadé -->
@@ -25,15 +26,7 @@
             </div>
             <!-- Les informations des divs suivantes sont envoyés dans la table profil lié à l'utilisateur connecté -->
             <div id="infos-profile">
-                <div>
-                    <label for="age">Age: </label>
-                    <input type="number" id="age" name="age" maxlength="3">
-                </div>
 
-                <div>
-                    <label for="ville">Ville: </label>
-                    <input type="text" id="ville" name="ville">
-                </div>
                 <div id="jeux-container">
                     <!-- Après chaque input, une nouvelle option de choix doit apparaître -->
                     <label for="jeux">Jeux / Système favoris: </label>
@@ -54,8 +47,8 @@
                 <label for="desc_MJ">Quel genre de MJ suis-je ?</label>
                 <textarea name="desc_MJ" id="desc_MJ" cols="5" rows="7" placeholder="Êtes vous vétéran MJ ou débutant ? Quelle genre de table et avec quel système avec vous déjà MJ ? Comment vous vous comportez en tant que MJ, êtes-vous à cheval sur les règles, ou plutôt relaxe, êtes-vous très narration, ou très baston, Comment gérez-vous les conflits entre/avec les joueurs? etc."></textarea>
                 
-                <label for="attentes">Ce qu'est une bonne table pour moi :</label>
-                <textarea name="attentes" id="attentes" cols="5" rows="7" placeholder="Décrivez ce qu'est, pour vous, le déroulement idéal d'une partie, le comportement des joueurs, du MJ, comment-vous voulez que les questions sur le système de règlent, etc."></textarea>
+                <label for="bonne_table">Ce qu'est une bonne table pour moi :</label>
+                <textarea name="bonne_table" id="bonne_table" cols="5" rows="7" placeholder="Décrivez ce qu'est, pour vous, le déroulement idéal d'une partie, le comportement des joueurs, du MJ, comment-vous voulez que les questions sur le système de règlent, etc."></textarea>
             </div>
 
         <?php // EN prévision d'une update, je ne veux pas que cela apparaisse dans le contenu inspecter
@@ -66,6 +59,9 @@
         //<label for="non">Non</label>
         //<input type="checkbox" id="non" name="choix" value="non"> -->
         ?>
+
+        <button type="submit" id="boutonEnvoi" >J'envoie les modifications</button>
+        <a href="profilJoueur.php" id="lienRetour" >Retour</a>
     </form>
     </main>
     <footer>

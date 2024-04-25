@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/profil_recherche_mesTables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Dice Gather</title>
+    <title>Dice Gather - trouver d'autres joueurs ou une table de jeu</title>
+    <meta name="description" content="Trouvez et rencontrer d'autres joueurs dans la même ville que vous et créer une table de jeu de rôle ensemble !">
 </head>
 <body>
     <header>
@@ -15,7 +16,9 @@
 
     </header>
     <main>
-            <div id="filter-container">
+        <h1>Recherche de joueurs et de table</h1>
+            <section id="filter-container">
+                <h2>Filtres</h2>
                 <label for="category">Que cherchez-vous ?</label>
                 <select id="category">
                     <option value=""></option>
@@ -71,12 +74,13 @@
                     </div>
                 </div>
                 <input type="submit" value="Rechercher">
-            </div>
+            </section>
 
 
             <!-- Bloc exemple pour l'appel des profils de la base de données -->
 
             <section id="profile-recherche">
+                <h2>Résultats de recherche</h2>
                     <div class="profile-pic-container">
                         <!-- Récupérer l'URL de l'image déjà uploadé -->
                         <img src="./assets/img/profile1.jpg" alt="Profile picture" id="profile-picture">
