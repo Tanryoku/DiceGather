@@ -1,3 +1,37 @@
+<?php
+    session_start();
+include("./PHP/functions.php");
+include("./PHP/BdD_login.php");
+
+    // Je me connecte à la BdD
+    $connexion = new PDO($dsn, DBUSER, DBPASS);
+    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    try{
+
+        // Requête SQL :
+        $sql = "SELECT * FROM `user` WHERE email = :email";
+
+        // Je prépare la requête
+        $requete = $connexion->prepare($sql);
+
+        // Je bind les valeurs
+
+        $email = sanitize_email($_POST["email"]);
+
+        $requete-> bindParam(":email", $_SESSION["email"]);
+        // $requete-> bindParam(":hash", $hash);
+
+        if ($requete->execute()) {
+            $user = $requete->fetch(PDO::FETCH_ASSOC);
+            var_dump($user, $sql, $_SESSION["email"]);
+        }
+    }catch(Exception $e){
+        echo($e-> getMessage());
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,10 +42,10 @@
 </head>
 <body>
     <header>
-        <?php include('./include/header_signedIn.inc.php'); ?>
+
     </header>
     <main>
-        <h1>Mes informations</h1>
+        <h1 class="h1White">Mes informations</h1>
         <section id="profile-container">
             <h2 class="titre">Mon Profil Joueur</h1>
             <div id="profile">
@@ -65,27 +99,26 @@
 
             <div class="blocInfo">
                 <label for="nom" class="sousTitre">Nom : </label>
-                <p name="nom"><?php echo("");?></p>
+                <p name="nom"><?php echo("$user[nom]");?></p>
             </div>
             <div class="blocInfo">
                 <label for="prenom" class="sousTitre">Prenom : </label>
-                <p name="prenom"><?php echo("");?>Exemple speurhgpuirehgpuhqezf</p>
+                <p name="prenom"><?php echo("$user[prenom]");?>Exemple speurhgpuirehgpuhqezf</p>
             </div>
             <div class="blocInfo">
                 <label for="dateNaissance" class="sousTitre">Date de naissance : </label>
-                <p name="dateNaissance"><?php echo("");?></p>
+                <p name="dateNaissance"><?php echo("$user[date_de_naissance]");?></p>
             </div>
             <div class="blocInfo">
                 <label for="ville" class="sousTitre">Ville de résidence : </label>
-                <p name="ville"><?php echo("");?></p>
+                <p name="ville"><?php echo("$user[ville_de_residence]");?></p>
             </div>
             <div class="blocInfo">
                 <label for="email" class="sousTitre">email : </label>
-                <p name="email"><?php echo("");?></p>
+                <p name="email"><?php echo("$user[email]");?></p>
             </div>
+            <a href="EffacerprofilJoueur.php" class="lienForm">Effacer mon compte</a>
         </section>
-
-        <a href="EffacerprofilJoueur.php">Effacer mon compte</a>
     </main>
     <footer>
         <?php include('./include/footer.inc.php'); ?>

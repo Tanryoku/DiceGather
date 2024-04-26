@@ -161,6 +161,10 @@ main textarea, input {
     color: var(--marron);
 }
 
+.h1White{
+    color: var(--blanc_casse);
+}
+
 #boutonEnvoi{
     width: 40%;
 }

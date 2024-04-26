@@ -32,8 +32,7 @@ if(!empty($_POST)){
             var_dump($user['hash']);
         // Vérification du mot de passe
             if (password_verify($_POST["password"], $user['hash'] )) {
-            // Le mot de passe correspond
-            echo "Connexion réussie!";
+
             // Enregistrer le token connecté dans la session et rediriger vers TdB
             $_SESSION['email'] = $user['email'];
             $_SESSION['id'] = $user['id_user'];
