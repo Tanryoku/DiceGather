@@ -17,27 +17,26 @@
     --orange : #FFB11C;
 }
 
-main *{
-    color: var(--blanc_casse);
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 4.5vw;
-}
-
 main{
     background-color: var(--marron);
+    min-height: 100vh;
 
 }
  /************* 
  page Login
   *************/
+
+  h1{
+    font-family: 'BlackChancery';
+    font-size: 3em;
+  }
+
 main section form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
 }
 
 #login-container{
@@ -46,7 +45,7 @@ main section form{
 }
 
 main form div{
-    width: 70%;
+    width: 90%;
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.3);
     display: flex;
@@ -68,11 +67,13 @@ main form div label{
 
 #username-container label, #password-container label{
     font-family: Morris;
+    font-size: 2em;
 }
 
 #username-container input, #password-container input, #sign-up_form div input{
     margin: 10% 0;
     background-color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5em;
 }
 
 #forgotpw{
@@ -80,10 +81,10 @@ main form div label{
 }
 
 main button{
-    width: 50%;
-    height: 10vw;
+    width: 70%;
+    height: 18vw;
     background-color: rgba(0, 0, 0, 0.5);
-    font-size: 5vw;
+    font-size: 2em;
     font-family: '';
     display: flex;
     justify-content: center;
@@ -104,11 +105,65 @@ main button:hover{
     color: #FFB11C;
 }
 
+@media screen and (min-width : 768px) {
+
+
+    h1{
+        margin-top: 20%;
+        font-size: 3em;
+    }
+
+    main form div{
+        padding: 1% 1%;
+        width: 70%;;
+    }
+
+    main form div label{
+        padding: 1% 0;
+    }
+
+    #username-container input, #password-container input, #sign-up_form div input{
+        margin: 1% 0;
+        padding: 1% 1%;
+    }
+
+    main button{
+        width: 45%;
+        height: 10vw;
+    }
+
+    #mdpOublie{
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+
+    h1{
+        font-size: 6em;
+        margin-top: 1%;
+    }
+
+    main form div{
+        width: 95%;
+        margin: 4% 0;
+        font-size: 1.5em;
+    }
+
+    main button{
+        font-size: 3.5em;
+        width: 30vw;
+        height: auto;
+        padding: 1% 1%;
+        margin-bottom: 1%;
+    }
+}
+
 /************
 Page Sign-up
  ************/
 
- #sign-up{
+#sign-up{
     background-image: url(../assets/img/contrat_sml.jpg);
     width: 100vw;
     height: 100%;
@@ -130,82 +185,8 @@ Page Sign-up
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-
-#sign-up_form div{
-    flex-direction: row;
-    width: 90%;
-}
-
-#sign-up_form div label{
-    padding: 0 5%;
-    font-size: 3.5vw;
-}
-
-#sign-up_form div input{
-margin: 0 5%;
-}
-
-
-@media screen and (min-width : 768px) {
-
-    main *{
-        font-size: 1.5vw;
-    }
-
-    main{
-        width: 100vw;
-        height: 100vh;
-    }
-
-    main section form{
-        width: 100%;
-        height: 100%;
-        margin: 0% 0;
-    }
-
-    main form div{
-        width: 40%;
-        height: 6%;
-        margin: 8% 0;
-        justify-content: space-between;
-    }
-
-    main form div label{
-        font-size: 2vw;
-        padding: 3% 0;
-    }
-
-    #username-container input, #password-container input{
-        margin: 3% 0;
-    }
-
-    main button{
-        font-size: 2vw;
-        padding: 0 8%;
-        width: unset;
-        height: 5vw ;
-    }
-
-    #sign-up form div{
-        width: 30%;
-        justify-content: center;
-        margin: 1.5% 1%;
-    }
-
-    #sign-up form div label{
-        font-size: 1vw;
-    }
-
-}
-
-@media screen and (min-width : 1024px) {
-    main form div{
-        width: 40%;
-        justify-content: space-between;
-        margin: 5% 0;
-    }
-    main form div label{
-        font-size: 2.5vw;
-        padding: 3% 0;
-    }
+main section form .blocInputForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }

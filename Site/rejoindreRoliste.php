@@ -71,38 +71,38 @@ if(!empty($_POST)){
         <section id="sign-up">
             <h1>inscription</h1>
             <div id="overlay_black"></div>
-            <form action="inscription" id="sign-up_form" method="POST" enctype="multipart/form-data">
-                <div id="nom_container">
+            <form action="" id="sign-up_form" method="POST" enctype="multipart/form-data">
+                <div class="blocInputForm">
                     <label for="nom">Nom de famille: </label>
                     <input type="text" name="nom" id="nom" required>
                 </div>
 
-                <div id="name_container">
+                <div class="blocInputForm">
                     <label for="prenom">Prénom: </label>
                     <input type="text" name="prenom" id="prenom" required>
                 </div>
 
-                <div id="date-of-birth_container">
+                <div class="blocInputForm">
                     <label for="date_de_naissance">Date de naissance: </label>
                     <input type="date" name="date_de_naissance" id="date_de_naissance" required>
                 </div>
 
-                <div id="city_container">
+                <div class="blocInputForm">
                     <label for="ville_de_residence">Ville de résidence: </label>
                     <input type="text" name="ville_de_residence" id="ville_de_residence" required>
                 </div>
 
-                <div id="email_container">
+                <div class="blocInputForm">
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email" required>
                 </div>
 
-                <div id="password_container">
+                <div class="blocInputForm">
                     <label for="password">Mot de passe: </label>
                     <input type="password" name="password" id="password" required>
                 </div>
 
-                <div id="password-confirm_container">
+                <div class="blocInputForm">
                     <label for="password-confirm">Confirmez votre mot de passe: </label>
                     <input type="password" name="password-confirm" id="password-confirm" required>
                 </div>
@@ -116,5 +116,5 @@ if(!empty($_POST)){
         <?php include('./include/footer.inc.php'); ?>
     </footer>
 </body>
-<script src="./js/app.js"></script>
+<script src="./js/header.js"></script>
 </html>

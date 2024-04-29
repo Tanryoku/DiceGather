@@ -126,5 +126,7 @@
     </footer>
     
 </body>
-<script src="./js/app.js"></script>
+<script src="./js/recherche.js"></script>
+<script src="./js/header.js"></script>
+
 </html>

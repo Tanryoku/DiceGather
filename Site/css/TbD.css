@@ -18,47 +18,56 @@
     --orange : #FFB11C;
 }
 
-main{
-    background-color: var(--marron);
-    display: flex;
-    flex-direction: row; /* revient à la ligne grâce au wrap, et permet de rendre le desktop responsif juste en gérant les tailles. */
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 75vh;
+h1{
+    align-self: center;
+    font-family: 'BlackChancery';
+    color: var(--blanc_casse);
 }
 
-main a{
+main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 80%;
-    height: 15%;
-    margin:  8% 10%;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    font-family: Morris;
-    font-size: 8vw;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#liens{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#liens a{
+display: flex;
+width: 80%;
+height: 10%;
+align-items: center;
+justify-content: center;
+background-color: rgba(0, 0, 0, 0.3);
+box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.3);
+font-family: Morris;
+color: var(--blanc_casse);
+margin: 5% 5%;
+padding: 1% 1%;
+font-size: calc(20px + 2vw);
 
     &:hover{
-        background-color: orange;
+        background-color: var(--orange);
+        transition: 0.2s ease-in-out;
         color: var(--marron);
-        transition: 0.2s;
-    };
-}
-
-@media screen and (min-width : 768px) {
-
-    main{
-        margin-top: 10% ; /* centrer les blocs pour rendre le visuel plus naturel malgré l'absence de header */
-        align-content: baseline;
-    }
-
-    
-    main a{
-        font-size: 3vw;
-        margin: 6% 10%;
-        width: 30%;
-        height: 25%;
     }
 }
+
+@media screen and (min-width: 768px) {
+    #liens a{
+        width: 35%;
+    }
+  }

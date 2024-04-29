@@ -1,10 +1,3 @@
-/* Le reset en premier pour normaliser border, padding et les list-type */
-@import url(reset.css);
-/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
-@import url(normalize.css);
-/* Importation des polices */
-@import url(font.css);
-
 /* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
 :root {
     --blanc_casse: #F3e2c5;
@@ -12,7 +5,7 @@
     --orange: #FFB11C;
 }
 
-* {
+header * {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;

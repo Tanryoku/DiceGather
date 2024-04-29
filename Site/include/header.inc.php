@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
         <nav id="nav">
             <section id="nav_bar">
                 <div id="logo_contain"><img src="./assets/img/logo/logo_dice-gather.jpg" alt="logo Dice Gather"></div>

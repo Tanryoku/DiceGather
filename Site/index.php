@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -44,5 +46,5 @@ Rejoignez la communauté vibrante de [Nom de l'Application] dès aujourd'hui et 
         <?php include('./include/footer.inc.php'); ?>
     </footer>
 </body>
-<script src="./js/app.js"></script>
+<script src="./js/header.js"></script>
 </html>

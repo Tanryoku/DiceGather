@@ -57,6 +57,6 @@
 <footer>
     <?php include('./include/footer.inc.php'); ?>
 </footer>
-
 </body>
+<script src="./js/header.js"></script>
 </html>

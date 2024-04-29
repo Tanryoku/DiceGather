@@ -1,6 +1,5 @@
 <?php
     session_start();
-    var_dump($_SESSION["email"]);
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@
         <?php include('./include/header_signedIn.inc.php'); ?>
     </header>
     <main>
-        <h1>tableau de bord</h1>
+        <h1>D A S H B O A R D</h1>
         <section id="liens">
             <a href="profilJoueur.php">Mon profil</div>
             <a href="messagerie.php">Messagerie</a>
@@ -31,5 +30,5 @@
         <?php include('./include/footer.inc.php'); ?>
     </footer>
 </body>
-<script src="./js/app.js"></script>
+<script src="./js/header.js"></script>
 </html>

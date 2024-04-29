@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Les fichiers requis au bon fonctionnement du code :
 include("./PHP/functions.php");

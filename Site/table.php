@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,6 +59,6 @@
         <?php include('./include/footer.inc.php'); ?>
     </footer>
 
-    <script src="./js/app.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 </html>

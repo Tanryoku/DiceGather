@@ -46,11 +46,12 @@ main{
 main div{
     border: 3px solid black;
     box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
-    width: 65%;
-    height: auto;
+    width: 90%;
+    height: 70vh;
     margin: 7.5% 10%;
     padding: 2% 2%;
-    text-align: center;
+    text-align: justify;
+    overflow-y: scroll;
 }
 
 main div h2, main div p{
@@ -59,12 +60,15 @@ main div h2, main div p{
 
 h2{
     font-family: Morris;
+    font-size: 3em;
 }
 
 p{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.5em;
+    line-height: 1.5;
 }
 
 main div:first-of-type{
@@ -125,12 +129,25 @@ main div, main a{
 
         main div{
             margin: 5% 10%;
+            overflow: unset;
+            width: 80%;
+            height: auto;
+        }
+
+        h2{
+            font-size: 2em;
+        }
+        
+        p{
+            font-size: 1em;
+            line-height: 1.5;
         }
 
         main a{
-            font-size: 1.5vw;
+            font-size: 2.5vw;
+            padding: 4% 1%;
             margin: 2.5% 15%;
-            width: 30%;
+            width: 40%;
             height: 10vh;
         }
 
@@ -152,10 +169,11 @@ Page retour accueil après inscription
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
+    
+    &:hover{
+        background-color: var(--orange);
+        transition: 0.2s ease-in-out;
+        color: var(--marron);
+    }
 }
 
-#retour:hover{
-    background-color: var(--orange);
-    transition: 0.2s ease-in-out;
-    color: var(--marron);
-}

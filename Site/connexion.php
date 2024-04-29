@@ -63,8 +63,8 @@ if(!empty($_POST)){
     </header>
     <main>
         <section>
-            <h1>Connexion</h1>
             <form action="" method="POST">
+                <h1>Connexion</h1>
                 <div id="username-container">
                     <label for="email">Votre adresse e-mail</label>
                     <input type="text" placeholder="email" id="email" name="email" autocomplete="email" required>
@@ -85,5 +85,5 @@ if(!empty($_POST)){
         <?php include('./include/footer.inc.php'); ?>
     </footer>
 </body>
-<script src="./js/app.js"></script>
+<script src="./js/header.js"></script>
 </html>

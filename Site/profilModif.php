@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -69,5 +73,5 @@
     </footer>
 
 </body>
-<script src="./js/app.js"></script>
+<script src="./js/header.js"></script>
 </html>
