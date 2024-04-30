@@ -3,8 +3,8 @@
     // Traitement
 
     // Les fichiers requis au bon fonctionnement du code :
-    include("./PHP/functions.php");
-    include("./PHP/BdD_login.php");
+    require_once("./PHP/functions.php");
+    require_once("./PHP/BdD_login.php");
 
     // Je vérifie que les champs ne sont pas vides
     if(!empty($_POST)){

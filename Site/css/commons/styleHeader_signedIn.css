@@ -121,7 +121,7 @@ nav {
         align-content: center;
         flex-wrap: wrap;
         justify-content: space-between;
-        height: 100%;
+        height: 100vh;
     }
 
     #nav_bar ul div{
@@ -132,7 +132,7 @@ nav {
         border: 1px solid black;
         margin: 13% 0;
         width: 80%;
-        height: 30%;
+        height: 20%;
         border-radius: 50px;
         font-size: 1.5vw;
     }

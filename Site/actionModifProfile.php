@@ -1,8 +1,8 @@
 <?php
 session_start();
     // Traitement
-    include("./PHP/functions.php");
-    include("./PHP/BdD_login.php");
+    require_once("./PHP/functions.php");
+    require_once("./PHP/BdD_login.php");
     // Les fichiers requis au bon fonctionnement du code :  
 
     // Je vérifie que les champs ne sont pas vides
@@ -18,7 +18,7 @@ session_start();
 
 
             // Requête SQL :
-            //  Si la table existe, on met à jour, si elle n'existe pas, on la crée.
+            //  Si la table exis&²te, on met à jour, si elle n'existe pas, on la crée.
             // Créer une table et modifier une table se font donc tous les deux dans la même page. 
             
             // code à vérifier après leçon session

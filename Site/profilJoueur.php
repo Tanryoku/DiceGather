@@ -1,7 +1,7 @@
 <?php
     session_start();
-include("./PHP/functions.php");
-include("./PHP/BdD_login.php");
+require_once("./PHP/functions.php");
+require_once("./PHP/BdD_login.php");
 
     // Je me connecte à la BdD
     $connexion = new PDO($dsn, DBUSER, DBPASS);
@@ -10,7 +10,6 @@ include("./PHP/BdD_login.php");
     try{
 
         // Requête SQL :
-        // $sql = "SELECT * FROM `user` WHERE email = :email; 
         $sql= "SELECT * FROM profil_joueur INNER JOIN user ON profil_joueur.id_user = user.id_user WHERE user.id_user = :id";
         // Je prépare la requête
         $requete = $connexion->prepare($sql);
@@ -21,7 +20,6 @@ include("./PHP/BdD_login.php");
 
         if ($requete->execute()) {
             $user = $requete->fetch(PDO::FETCH_ASSOC);
-            var_dump($user);
         }
     }catch(Exception $e){
         echo($e-> getMessage());
@@ -39,7 +37,7 @@ include("./PHP/BdD_login.php");
 </head>
 <body>
     <header>
-
+    <?php include('./include/header_signedIn.inc.php'); ?>
     </header>
     <main>
         <h1 class="h1White">Mes informations</h1>

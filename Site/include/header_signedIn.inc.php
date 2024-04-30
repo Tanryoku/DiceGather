@@ -1,8 +1,8 @@
 <?php
 
 // Les fichiers requis au bon fonctionnement du code :
-include("./PHP/functions.php");
-include("./PHP/BdD_login.php");
+require_once("./PHP/functions.php");
+require_once("./PHP/BdD_login.php");
 
     if (!isset($_SESSION["id"]) && (!isset($_SESSION["email"]))) {
         header("Location: connexion.php");
@@ -28,8 +28,8 @@ include("./PHP/BdD_login.php");
         // $requete-> bindParam(":hash", $hash);
 
         if ($requete->execute()) {
-            $user = $requete->fetch(PDO::FETCH_ASSOC);
-            if (!$id == $user["id_user"] && !$email == $user['email']) {
+            $user_co = $requete->fetch(PDO::FETCH_ASSOC);
+            if (!$id == $user_co["id_user"] && !$email == $user_co['email']) {
                 header("Location: connexion.php");
             }
         }
