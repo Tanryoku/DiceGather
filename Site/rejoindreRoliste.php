@@ -69,7 +69,7 @@ if(!empty($_POST)){
     </header>
     <main>
         <section id="sign-up">
-            <h1>inscription</h1>
+            <h1 class="darkTitre">INSCRIPTION</h1>
             <div id="overlay_black"></div>
             <form action="" id="sign-up_form" method="POST" enctype="multipart/form-data">
                 <div class="blocInputForm">

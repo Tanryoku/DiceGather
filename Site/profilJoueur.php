@@ -54,7 +54,7 @@ require_once("./PHP/BdD_login.php");
 
                 <div id="jeux-container">
                     <!-- Après chaque input, une nouvelle option de choix doit apparaître -->
-                    <label for="jeux">Jeux / Système favoris: </label>
+                    <h3 class="sousTitre" for="jeux">Jeux / Système favoris: </h3>
                     <div class="blocInfo">
                     <p><?php echo("$user[jeu1]");?></p>
                     <p><?php echo("$user[jeu2]");?></p>
@@ -66,15 +66,21 @@ require_once("./PHP/BdD_login.php");
 
 
             <div id="descriptions">
-                <label for="desc_joueur">Quel genre de joueur suis-je ?</label>
-                <p><?php echo("$user[description_joueur]");?></p>
-                
-                <label for="desc_MJ">Quel genre de MJ suis-je ?</label>
-                <p><?php echo("$user[description_mj]");?></p>
-                
-                <label for="attentes">Ce qu'est une bonne table pour moi :</label>
-                <p><?php echo("$user[pseudo]");?></p>
-            </div>
+                <h3 class="sousTitre" for="desc_joueur">Quel genre de joueur suis-je ?</h3>
+                <div class="blocInfo">
+                    <p><?php echo("$user[description_joueur]");?></p>
+                </div>
+
+                <h3 class="sousTitre" for="desc_MJ">Quel genre de MJ suis-je ?</h3>
+                <div class="blocInfo">
+                    <p><?php echo("$user[description_mj]");?></p>
+                </div>
+
+                <h3 class="sousTitre" for="attentes">Ce qu'est une bonne table pour moi :</h3>
+                <div class="blocInfo">
+                    <p><?php echo("$user[pseudo]");?></p>
+                </div>
+            </div>  
 
             <a href="./profilModif.php" class="lienForm">Modifier mon profil</a>
         </section>
@@ -82,26 +88,31 @@ require_once("./PHP/BdD_login.php");
         <section id="infosCompte">
             <h2 class="titre">Mes données personnelles</h1>
 
+            <h3 class="sousTitre" for="nom" class="sousTitre">Nom : </h3>
             <div class="blocInfo">
-                <label for="nom" class="sousTitre">Nom : </label>
                 <p name="nom"><?php echo("$user[nom]");?></p>
             </div>
+
+            <h3 class="sousTitre" for="prenom" class="sousTitre">Prenom : </h3>
             <div class="blocInfo">
-                <label for="prenom" class="sousTitre">Prenom : </label>
                 <p name="prenom"><?php echo("$user[prenom]");?>Exemple speurhgpuirehgpuhqezf</p>
             </div>
+
+            <h3 class="sousTitre" for="dateNaissance" class="sousTitre">Date de naissance : </h3>
             <div class="blocInfo">
-                <label for="dateNaissance" class="sousTitre">Date de naissance : </label>
                 <p name="dateNaissance"><?php echo("$user[date_de_naissance]");?></p>
             </div>
+
+            <h3 class="sousTitre" for="ville" class="sousTitre">Ville de résidence : </h3>
             <div class="blocInfo">
-                <label for="ville" class="sousTitre">Ville de résidence : </label>
                 <p name="ville"><?php echo("$user[ville_de_residence]");?></p>
             </div>
+            
+            <h3 class="sousTitre" for="email" class="sousTitre">email : </h3>
             <div class="blocInfo">
-                <label for="email" class="sousTitre">email : </label>
                 <p name="email"><?php echo("$user[email]");?></p>
             </div>
+            
             <a href="EffacerUser.php" class="lienForm">Effacer mon compte</a>
         </section>
     </main>

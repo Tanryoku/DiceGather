@@ -22,14 +22,15 @@ main{
     min-height: 100vh;
 
 }
- /************* 
- page Login
-  *************/
+/************* 
+page Login
+*************/
 
-  h1{
+h1{
     font-family: 'BlackChancery';
-    font-size: 3em;
-  }
+    font-size: 1.5em;
+    text-align: center;
+}
 
 main section form{
     display: flex;
@@ -140,7 +141,7 @@ main button:hover{
 @media screen and (min-width : 1024px) {
 
     h1{
-        font-size: 6em;
+        font-size: 3em;
         margin-top: 1%;
     }
 
@@ -151,11 +152,19 @@ main button:hover{
     }
 
     main button{
-        font-size: 3.5em;
+        font-size: 1.5em;
         width: 30vw;
         height: auto;
         padding: 1% 1%;
         margin-bottom: 1%;
+    }
+
+    #username-container label, #password-container label {
+        font-size: 1.5em;
+    }
+
+    #username-container input, #password-container input, #sign-up_form div input {
+    font-size: 1em;
     }
 }
 
@@ -164,12 +173,26 @@ Page Sign-up
  ************/
 
 #sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-image: url(../assets/img/contrat_sml.jpg);
     width: 100vw;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.darkTitre{
+    color: var(--marron);
+    text-shadow: 
+        -1px -1px 0 grey,  
+         1px -1px 0 grey,
+        -1px  1px 0 grey,
+         1px  1px 0 grey; /* Ombre pour simuler la bordure */
+
 }
 
 #overlay_black{
@@ -181,12 +204,33 @@ Page Sign-up
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#sign-up_form{
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
 main section form .blocInputForm{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+}
+
+#sign-up_form div input {
+    width: 80%;
+}
+
+@media screen and (min-width : 768px) {
+
+    #sign-up_form .blocInputForm, #sign-up_form button {
+        width: 130%;
+    }
+
+}
+
+@media screen and (min-width : 1024) {
+    #sign-up_form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #sign-up_form .blocInputForm{
+        width: 30%;
+        margin: 0 1%;
+    }
 }
