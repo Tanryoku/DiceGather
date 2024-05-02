@@ -5,7 +5,7 @@
     const tableFilters = document.getElementById('table-filters');
     const playerFilters = document.getElementById('player-filters');
     
-    // Hide player and GM filters initially
+    // Les blocs sont cachés, seul celui choisit dans le select apparait.
     playerFilters.classList.add('hidden');
     console.log(categorySelect.value, tableFilters, playerFilters)
     

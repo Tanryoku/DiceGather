@@ -1,6 +1,6 @@
 /* Les deux premières polices sont fantasie spécifiques et n'existent pas sur google-font. */
 
-/* Titre */
+/* Titre (dur à lire, ne pas utiliser pour du petit texte et du contenu*/
 @font-face {
     font-family: 'BlackChancery';
     src: url(assets/font/blackchancery/BLKCHCRY.ttf);

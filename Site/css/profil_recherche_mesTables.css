@@ -36,7 +36,7 @@ main section, main form{
     background-repeat: no-repeat;
     background-size: 175%;
     background-position: center center;
-    margin: 10% 4%;
+    margin: 6% 4%;
     padding: 10% 0;
     display: flex;
     flex-direction: column;
@@ -52,9 +52,18 @@ main section, main form{
 .titre{
     text-align: center;
     font-family: Morris;
+    margin: 4% 0;
 }
 
 #profile-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#infosCompte{
     display: flex;
     /* Deux prochaines règes pour prévoir responsif avec desktop (gérer les tailles des div class="blocinfo") */
     flex-direction: row;
@@ -62,9 +71,20 @@ main section, main form{
     justify-content: center;
 }
 
-.profile-pic-container{
-    width: 30%;
+.titre{
+    width: 100%;
+}
+
+#profile{
+    width: 80%;
     height: auto;
+}
+
+.pseudo{
+    font-size: 1.8em;
+    font-family: 'BlackChancery';
+    text-align: center;
+    margin: 5% 0;
 }
 
 .profile-pic-container img{
@@ -73,7 +93,7 @@ main section, main form{
     border-radius: 20px;
 }
 
-.blocInfo{
+.blocInfo, .blocDescription{
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     margin-bottom: 10%;
@@ -81,10 +101,19 @@ main section, main form{
     padding: 2% 2%;
 }
 
+.blocDescription{
+    max-height: 3em;
+    overflow-y: scroll;
+    margin: 2% 1%;
+    padding: 1% 1%;
+}
+
 .sousTitre{
     font-family: Morris;
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 3%;
+    width: 100%;
+    text-align: center;
 }
 
 .lienForm{
@@ -95,11 +124,179 @@ main section, main form{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--marron);
-    border-radius: 1%;
+    color: var(--blanc_casse);
+    border-radius: 1em;
     &:hover{
+        color: var(--marron);
         background-color: var(--orange);
         transition: 0.2s ease-in-out;
         color: var(--marron);
     }
+}
+
+p{
+    font-size: 1.1em;
+}
+
+@media screen and (min-width: 768px) {
+    main section, main form{
+        /* version 640px de l'image */
+        background-image: url(../assets/Img/parcho-profil_big.jpg);
+    }
+
+    .titre{
+        font-size: 2.5em;
+    }
+
+    .sousTitre{
+        margin-bottom: 1%;
+        font-size: 2em;
+    }
+    .jeu{
+        margin-bottom: 1%;
+    }
+
+    .pseudo{
+        font-size: 2em;
+    }
+    p{
+        font-size: 1.5em;
+    }
+
+    #descriptions{
+        width: 100%;
+    }
+    .lienForm{
+        height: 0%;
+        font-size: 2em;
+        padding: 1% 1%;
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+    #profile-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .h1White{
+        font-size: 2em;
+    }
+
+    #profile-container, #infosCompte{
+        margin: 4%;
+        padding: 1% 1%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .titre{
+        font-size: 1.5em;
+        width: 75%;
+    }
+
+    .sousTitre{
+        margin-bottom: 1%;
+        font-size: 1.1em;
+    }
+
+    .blocInfo{
+        margin-bottom: 1%;
+        height: unset;
+        padding: 1%;
+    }
+
+
+
+    .jeu{
+        margin-bottom: 1%;
+    }
+
+    .pseudo{
+        font-size: 1.5em;
+        font-family: 'BlackChancery';
+        text-align: center;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    .lienForm{
+        margin-top: 5%;
+    }
+}
+
+
+/***************************************************************************************************************
+                                Page modification
+
+***************************************************************************************************************/
+
+.descriptionContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionContainer textarea{
+    max-height: 10%;
+    overflow-y: scroll;
+}
+
+textarea, input{
+    font-size: 1.5em;
+}
+
+input{
+    margin-bottom: 3%;
+}
+
+
+main .lienForm:last-of-type{
+    margin: 5% 25% 3% 25%;
+}
+
+/***************************************************************************************************************
+                                Page Recherche
+
+***************************************************************************************************************/
+
+.hidden{
+    display: none;
+}
+
+#bubble{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 1%;
+}
+
+#bubble-desktop{
+    display: none;
+}
+
+.profile-pic-container{
+    max-width: 50%;
+}
+
+#profile-recherche .blocInfo{
+    width: 80%;
+    margin: 1% 1%;
+}
+@media screen and (min-width: 768px) {
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+
 }

@@ -25,4 +25,3 @@ function sanitize_url($url) {
     }
     return $url;
 }
-?>

@@ -83,7 +83,7 @@ if (!empty($_POST)) {
         <?php include('./include/header_signedIn.inc.php'); ?>
     </header>
     <main>
-        <h1>Recherche de joueurs et de table</h1>
+        <h1 class="h1White">Recherche de joueurs et de table</h1>
             <section id="filter-container">
                 <h2>Filtres</h2>
                 <label for="category">Que cherchez-vous ?</label>
@@ -145,35 +145,33 @@ if (!empty($_POST)) {
 
 
             <!-- Bloc exemple pour l'appel des profils de la base de données -->
-
+            <h2 class="h1White">Résultats de recherche</h2>
             <section id="profile-recherche">
-                <h2>Résultats de recherche</h2>
-                    <div class="profile-pic-container">
-                        <!-- Récupérer l'URL de l'image déjà uploadé -->
-                        <img src="./assets/img/profile1.jpg" alt="Profile picture" id="profile-picture">
-                    </div>
-                    <!-- Récupérer le nom utilisateur entré lors de l'inscription -->
+                <div id="bubble">
+                    <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
+                </div>
+                <div class="profile-pic-container">
+                    <!-- Récupérer l'URL de l'image déjà uploadé -->
+                    <img src="./assets/img/profile1.jpg" alt="Profile picture" id="profile-picture">
+                </div>
                 <!-- Les informations des divs suivantes sont envoyés dans la table profil lié à l'utilisateur connecté -->
                 <div id="infos-profile">
                     <div id="profile-name">
                         <h1>*Je suis un exemple !*</h1>
-                        <div id="bubble">
-                            <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
-                        </div>
                     </div>
 
-                    <div id="age-container">
-                        <label for="age">Age :</label>
+                    <div class="blocInfo">
+                        <label for="age" class="sousTitre">Age :</label>
                         <p id="age">99 ans</p>
                     </div>
     
-                    <div id="city-container">
-                        <label for="city">Ville :</label>
+                    <div class="blocInfo">
+                        <label for="city" class="sousTitre">Ville :</label>
                         <p id="city">Avignon</p>
                     </div>
-                    <div id="jeux-container">
+                    <div class="blocInfo">
                         <!-- Après chaque input, une nouvelle option de choix doit apparaître -->
-                        <label for="jeux">Jeux / Système favoris: </label>
+                        <label for="jeux" class="sousTitre">Jeux / Système favoris: </label>
                         <div id="jeux">
                             <p id="jeux1">Donjons et dragons 5ème édition</p>
                             <p id="jeux2">Warhammer Fantaisie</p>
@@ -190,23 +188,23 @@ if (!empty($_POST)) {
         <?php
         foreach($liste as $user){ ?>
             <section id="profile-recherche">
-                <h2>Résultats de recherche</h2>
-                    <div class="profile-pic-container">
-                        <!-- Récupérer l'URL de l'image déjà uploadé -->
-                        <img src="<?=$user['img_profil']?>" alt="Profile picture" id="profile-picture">
-                    </div>
-                    <!-- Récupérer le nom utilisateur entré lors de l'inscription -->
+                <div id="bubble">
+                    <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
+                </div>
+
+                <div class="profile-pic-container">
+                    <!-- Récupérer l'URL de l'image déjà uploadé -->
+                    <img src="<?=$user['img_profil']?>" alt="Profile picture" id="profile-picture">
+                </div>
+
                 <!-- Les informations des divs suivantes sont envoyés dans la table profil lié à l'utilisateur connecté -->
                 <div id="infos-profile">
                     <div id="profile-name">
                         <h1><?= $user['pseudo'] ?></h1>
-                        <div id="bubble">
-                            <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
-                        </div>
                     </div>
 
-                    <div id="age-container">
-                        <label for="age">Age :</label>
+                    <div class="blocInfo">
+                        <label for="age" class="sousTitre">Age :</label>
                         <p id="age">
                         <?php
                             $dateNaissance = new DateTime($user['date_de_naissance']);
@@ -217,13 +215,13 @@ if (!empty($_POST)) {
                         </p>
                     </div>
     
-                    <div id="city-container">
-                        <label for="city">Ville :</label>
+                    <div class="blocInfo">
+                        <label for="city" class="sousTitre">Ville :</label>
                         <p id="city"><?= $user['ville_de_residence'] ?></p>
                     </div>
-                    <div id="jeux-container">
+                    <div class="blocInfo">
                         <!-- Après chaque input, une nouvelle option de choix doit apparaître -->
-                        <label for="jeux">Jeux / Système favoris: </label>
+                        <label for="jeux" class="sousTitre">Jeux / Système favoris: </label>
                         <div id="jeux">
                             <p id="jeu1"><?= $user['jeu1'] ?></p>
                             <p id="jeu2"><?= $user['jeu2'] ?></p>
@@ -235,15 +233,15 @@ if (!empty($_POST)) {
                     </div>
                 </div>
             </section>
-        </div>
+            <?php } ?>
     </main>
-    <?php } ?>
+
     <footer>
         <?php include('./include/footer.inc.php'); ?>
     </footer>
     
 </body>
-<script src="./js/recherche.js"></script>
 <script src="./js/header.js"></script>
+<script src="./js/recherche.js"></script>
 
 </html>
