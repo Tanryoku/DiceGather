@@ -102,7 +102,7 @@ main a{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 1%;
 }
 
 main a:hover{

@@ -40,7 +40,9 @@ Mais ce n'est pas tout ! Grâce à [Nom de l'Application], vous pouvez égalemen
 Rejoignez la communauté vibrante de [Nom de l'Application] dès aujourd'hui et préparez-vous à vivre des aventures épiques, à forger des amitiés durables et à créer des souvenirs inoubliables dans le monde merveilleux du jeu de rôle papier !</p>
         </div>
 
-        <a href="rejoindreRoliste.php">Rejoindre les rôlistes de <br> Dice Gather</a>
+        <a href="rejoindreRoliste.php">Rejoindre les Rôlistes de <br> Dice Gather</a>
+
+        <a href="connexion.php">Je suis déjà un Rôliste</a>
     </main>
     <footer>
         <?php include('./include/footer.inc.php'); ?>

@@ -85,28 +85,28 @@ if (!empty($_POST)) {
     <main>
         <h1 class="h1White">Recherche de joueurs et de table</h1>
             <section id="filter-container">
-                <h2>Filtres</h2>
-                <label for="category">Que cherchez-vous ?</label>
-                <select id="category">
+                <h2 id="titreRechercheFiltre">Que cherchez-vous ?</h2>
+                <label for="category"></label>
+                <select id="category" aria-labelledby="titreRechercheFiltre">
                     <option value=""></option>
                     <option value="table">Table</option>
                     <option value="player">Joueurs</option>
                 </select>
 
                 <form id="table-filters" class="hidden">
-                    <div class="table-filter">
+                    <div class="filter">
                         <label for="tablename">Nom de la table:</label>
-                        <input type="text" id="tablename" name="tablename" placeholder="Laissez vide pour chercher toutes les tables." >
+                        <input type="text" id="tablename" name="tablename" placeholder="Laissez vide pour chercher toutes les tables." aria-labelledby="tablename">
                     </div>
 
-                    <div class="table-filter">
+                    <div class="filter">
                         <label for="tableGame">Nom du système de jeu:</label>
-                        <input type="text" id="tableGame" name="tableGame" placeholder="Laissez vide pour chercher toutes les tables.">
+                        <input type="text" id="tableGame" name="tableGame" placeholder="Laissez vide pour chercher toutes les tables." aria-labelledby="tableGame">
                     </div>
 
-                    <div class="nb-filter">
-                        <label for="full">Nb de joueurs ayant rejoint la table</label>
-                        <select id="full">
+                    <div class="filter">
+                        <label for="nbJoueursTable">Nb de joueurs ayant rejoint la table</label>
+                        <select id="nbJoueursTable" aria-labelledby="nbJoueursTable">
                             <option value="">All</option>
                             <option value="empty">Aucun joueur</option>
                             <option value="not-empty">La table n'est pas pleine.</option>
@@ -116,46 +116,50 @@ if (!empty($_POST)) {
                 </form>
 
                     <!-- Player-filter and gm-filter sont exactement le même bloc, le php cependant sera différent car appelera des tables différentes à faire apparaître dans les résultats -->
-                <form id="player-filters" class="hidden" action="" method="POST">
+                <form id="player-filters"  class="hidden" action="" method="POST">
                     <div class="filter">
                         <label for="pseudo-filter" >Nom du joueur</label>
-                        <input type="text" id="pseudo-filter" name="pseudoFilter" placeholder="Laissez vide pour chercher tous les joueurs." autocomplete="pseudo">
+                        <input type="text" id="pseudo-filter" name="pseudoFilter" placeholder="Laissez vide pour chercher tous les joueurs." autocomplete="pseudo" aria-labelledby="pseudo-filter">
                     </div>
 
                     <div class="filter">
                         <label for="nomJeu-filter">Nom du jeu</label>
-                        <input type="text" id="nomJeu-filter" name="nomJeuFilter"  placeholder="Laissez vide pour chercher tous les jeux.">
+                        <input type="text" id="nomJeu-filter" name="nomJeuFilter"  placeholder="Laissez vide pour chercher tous les jeux." aria-labelledby="nomJeu-filter">
                     </div>
 
                     <div class="filter">
                         <label for="city-filter">Ville</label>
-                        <input type="text" id="city-filter" name="cityFilter" placeholder="Laissez vide pour chercher dans toutes les villes.">
+                        <input type="text" id="city-filter" name="cityFilter" placeholder="Laissez vide pour chercher dans toutes les villes." aria-labelledby="city-filter">
                     </div>
 
                     <div class="filter">
                         <label for="age-select">Age:</label>
-                        <select id="age-select" name="ageFilter">
-                        <option value="">All</option>
-                        <option value="19">Uniquement les personnes majeurs</option>
+                        <select id="age-select" name="ageFilter" aria-labelledby="age-select">
+                            <option value="">Tout age</option>
+                            <option value="19">Uniquement les personnes majeurs</option>
                         </select>
                     </div>
-                    <input type="submit" value="Rechercher">
+                    <input type="submit" value="Rechercher" id="btnLancerRecherche" class="lienForm" aria-labelledby="btnLancerRecherche">
                 </form>
             </section>
 
 
             <!-- Bloc exemple pour l'appel des profils de la base de données -->
             <h2 class="h1White">Résultats de recherche</h2>
-            <section id="profile-recherche">
-                <div id="bubble">
-                    <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
-                </div>
-                <div class="profile-pic-container">
-                    <!-- Récupérer l'URL de l'image déjà uploadé -->
-                    <img src="./assets/img/profile1.jpg" alt="Profile picture" id="profile-picture">
-                </div>
+            <section id="profilRecherche">
+
                 <!-- Les informations des divs suivantes sont envoyés dans la table profil lié à l'utilisateur connecté -->
-                <div id="infos-profile">
+                <div id="resultatRechercheGauche">
+
+                    <div id="bubblePhone">
+                        <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
+                    </div>
+
+                    <div class="profile-pic-container">
+                        <!-- Récupérer l'URL de l'image déjà uploadé -->
+                        <img src="./assets/img/profile1.jpg" alt="Profile picture" id="profile-picture" aria-labelledby="profile-picture">
+                    </div>
+
                     <div id="profile-name">
                         <h1>*Je suis un exemple !*</h1>
                     </div>
@@ -178,27 +182,41 @@ if (!empty($_POST)) {
                             <p id="jeux3">Call of Cthulu</p>
                         </div>
                     </div>
-                    <div id="bubble-desktop">
+                </div>
+                <div id="resultatRechercheDroite">
+
+                    <div id="bubbleDesktop">
                         <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
                     </div>
+
+                    <label for="descriptionJoueur">Ma description :</label>
+
+                    <p id="descriptionJoueur" name="descriptionJoueur">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deserunt facere reprehenderit perspiciatis rem quaerat provident beatae sed officia ipsam. Eum, fugiat sed. Aperiam reiciendis nisi ullam impedit eveniet corporis?
+                    Ipsam quod eaque nihil exercitationem! Mollitia, atque quia? Blanditiis ipsa, minima libero veritatis, nemo nulla perspiciatis, laboriosam quam laborum dicta doloribus placeat fugit in iste voluptate. Dicta ducimus quis debitis.</p>
+
+                    <label for="bonneTable">Une Bonne Table pour moi c'est :</label>
+
+                    <p id="bonneTable" name="bonneTable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deserunt facere reprehenderit perspiciatis rem quaerat provident beatae sed officia ipsam. Eum, fugiat sed. Aperiam reiciendis nisi ullam impedit eveniet corporis?
+                    Ipsam quod eaque nihil exercitationem! Mollitia, atque quia? Blanditiis ipsa, minima libero veritatis, nemo nulla perspiciatis, laboriosam quam laborum dicta doloribus placeat fugit in iste voluptate. Dicta ducimus quis debitis.</p>
                 </div>
             </section>
-        </div>
 
         <?php
         foreach($liste as $user){ ?>
-            <section id="profile-recherche">
-                <div id="bubble">
-                    <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
-                </div>
-
-                <div class="profile-pic-container">
-                    <!-- Récupérer l'URL de l'image déjà uploadé -->
-                    <img src="<?=$user['img_profil']?>" alt="Profile picture" id="profile-picture">
-                </div>
+            <section id="profilRecherche">
 
                 <!-- Les informations des divs suivantes sont envoyés dans la table profil lié à l'utilisateur connecté -->
-                <div id="infos-profile">
+                <div id="resultatRechercheGauche">
+
+                    <div id="bubblePhone">
+                        <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
+                    </div>
+
+                    <div class="profile-pic-container">
+                        <!-- Récupérer l'URL de l'image déjà uploadé -->
+                        <img src="<?=$user['img_profil']?>" alt="Profile picture" id="profile-picture">     
+                    </div>
+
                     <div id="profile-name">
                         <h1><?= $user['pseudo'] ?></h1>
                     </div>
@@ -206,7 +224,7 @@ if (!empty($_POST)) {
                     <div class="blocInfo">
                         <label for="age" class="sousTitre">Age :</label>
                         <p id="age">
-                        <?php
+                            <?php
                             $dateNaissance = new DateTime($user['date_de_naissance']);
                             $dateActuelle = new DateTime();
                             $age = $dateNaissance->diff($dateActuelle);
@@ -214,7 +232,7 @@ if (!empty($_POST)) {
                             ?>
                         </p>
                     </div>
-    
+
                     <div class="blocInfo">
                         <label for="city" class="sousTitre">Ville :</label>
                         <p id="city"><?= $user['ville_de_residence'] ?></p>
@@ -228,12 +246,25 @@ if (!empty($_POST)) {
                             <p id="jeu3"><?= $user['jeu3'] ?></p>
                         </div>
                     </div>
-                    <div id="bubble-desktop">
+                </div>
+                <div id="resultatRechercheDroite">
+
+                    <div id="bubbleDesktop">
                         <img src="./assets/icons/bulle.svg" alt="icone bulle de dialogue">
                     </div>
+
+                    <label for="descriptionJoueur">Ma description :</label>
+
+                    <p id="descriptionJoueur" name="descriptionJoueur"><?= $user['description_joueur'] ?></p>
+
+                    <label for="bonneTable">Une Bonne Table pour moi c'est :</label>
+
+                    <p id="bonneTable" name="bonneTable"><?= $user['bonne_table'] ?></p>
                 </div>
             </section>
             <?php } ?>
+
+            <a href="dashboard.php" class="lienForm">Retour</a>
     </main>
 
     <footer>

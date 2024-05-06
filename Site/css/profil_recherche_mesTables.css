@@ -285,18 +285,149 @@ main .lienForm:last-of-type{
     max-width: 50%;
 }
 
-#profile-recherche .blocInfo{
+#profilRecherche .blocInfo{
     width: 80%;
     margin: 1% 1%;
 }
+
+#resultatRechercheDroite{
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
 
+    .h1White{
+        font-size: 2.5em;
+    }
 
+    #filter-container{
+        margin: 2% 1%;
+        padding: 3%;
+    }
 
+    #filter-container h2{
+        margin-bottom: 2%;
+    }
+
+    #filter-container select{
+        height: 2em;
+    }
+
+    #player-filters, #table-filters{
+        padding:  1%;
+        margin: 1%;
+    }
+
+    #category, #player-filters div label, #player-filters div input, #player-filters div select{
+        font-size: 1.5em;
+        margin: 0.5%;
+    }
+
+    #btnLancerRecherche{
+        margin: 0;
+        font-family: 'BlackChancery';
+        align-self: center;
+    }
+
+    .blocInfo label, blocInfo p{
+        font-size: 2em;
+    }
+
+    #profilRecherche{
+    padding: 2%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
 
+    #bubblePhone{
+        display: none;
+    }
 
+    #bubbleDesktop{
+        display: block;
+        margin-left: 85%;
+    }
+
+    #profilRecherche{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #filter-container {
+        padding: 2%;
+    }
+
+    #filter-container h2{
+        font-size: 1.5em ;
+    }
+
+    #category{
+        font-size: 1em;
+    }
+
+    #player-filters div label, #player-filters div input, #player-filters div select{
+        font-size: 1em;
+        margin: 0.5%;
+    }
+
+    #profilRecherche .blocInfo {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .blocInfo label, blocInfo p{
+        font-size: 1.5em;
+    }
+
+    #profilRecherche{
+    padding: 2%;
+    }
+    
+    h1{
+        font-size: 1.5em;
+    }
+
+    .sousTitre{
+        font-size: 1.2em;
+    }
+
+    #resultatRechercheGauche {
+        text-align: center;
+        width: 35%;
+    }
+
+    #resultatRechercheGauche div:first-of-type{
+        width: 100%;
+    }
+
+    #jeux p{
+        margin: 1% 0;
+    }
+
+    #resultatRechercheGauche div:first-of-type .blocInfo{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #resultatRechercheDroite {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    #resultatRechercheDroite p{
+        text-align: justify ;
+    }
+    #resultatRechercheDroite label{
+        margin: 1% 0;
+        font-family: Morris;
+        font-weight: bold;
+    }
 
 }
