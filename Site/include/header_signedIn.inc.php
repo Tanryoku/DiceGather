@@ -40,16 +40,18 @@ require_once("./PHP/BdD_login.php");
 
         <nav id="nav">
             <section id="nav_bar">
-                <div id="logo_contain"><img src="./assets/img/logo/logo_dice-gather.jpg" alt="logo Dice Gather"></div>
-                <p id="title">Dice Gather</p>
-                <ul id="signed-in">
-                    <div id="header-up">
-                        <a href="profilJoueur.php">Profil</a>
-                        <a href="messagerie.php"> Messagerie</a>
-                        <a href="recherche.php"> Recherche</a>
-                        <a href="mesTables.php">Mes Tables</a>
-                        <a href="./include/log_out.php">Deconnexion</a>
-                    </div>
+                <div id="logo_contain">
+                    <a href="index.php">
+                        <img src="./assets/img/logo/logo_dice-gather.jpg" alt="logo Dice Gather">
+                    </a>
+                </div>
+                <h6 id="headerTitle">Dice Gather</h6>
+                <ul>
+                    <a href="profilJoueur.php">Profil</a>
+                    <a href="messagerie.php"> Messagerie</a>
+                    <a href="recherche.php"> Recherche</a>
+                    <a href="mesTables.php">Mes Tables</a>
+                    <a href="./include/log_out.php">Deconnexion</a>
                 </ul>
             </section>
             <span id="nav_opener">&#8677;</span>

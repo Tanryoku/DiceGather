@@ -5,7 +5,7 @@
 /* Importation des polices */
 @import url(./commons/font.css);
 /* style header */
-@import url(./commons/styleHeader_signedIn.css);
+@import url(./commons/styleHeader.css);
 /* style footer */
 @import url(./commons/styleFooter.css);
 

@@ -11,14 +11,6 @@
 
 
 
-
-/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
-:root {
-    --blanc_casse : #F3e2c5;
-    --marron : #420d09;
-    --orange : #FFB11C;
-}
-
 /* Difficulté à ajuster le footer, facilite son positionnement en fin de page */
 html, body{
     min-height: 100%;

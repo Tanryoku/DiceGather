@@ -1,0 +1,245 @@
+/* Le reset en premier pour normaliser border, padding et les list-type */
+@import url(reset.css);
+/* Un Normalize importé d'un github : "@import url(reset.css);" pour assurer le fonctionnement sur un maximum de navigateurs */
+@import url(normalize.css);
+/* Importation des polices */
+@import url(font.css);
+
+/* Nommer les couleurs pour facilement les réutiliser et faciliter l'écriture du code */
+:root {
+    --blanc_casse: #F3e2c5;
+    --marron: #420d09;
+    --orange: #FFB11C;
+}
+
+
+/* 
+Le style a été construit avec le premier header pré connexion en tête. Les modifications pour la page header_signedIn.inc.php se trouvent à la fin du fichier. 
+Elles se résument à l'ul de la nav qui a été renommé avec l'id signed-in afin de faire les modifications nécessaires sans créer de conflits.
+*/
+
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: var(--marron);
+}
+
+nav {
+    width: 100%;
+    height: 15vw;
+    background-color: var(--blanc_casse);
+}
+
+#nav_bar {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#title,#nav_opener {
+    display: none;
+}
+
+#logo_contain {
+    width: 12%;
+    height: auto;
+    object-fit: contain;
+    margin: 2% 1%;
+}
+
+#logo_contain img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50px;
+}
+
+#nav_bar ul {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 0% 0; /* va à droite */
+    padding: 0 0;
+}
+
+#nav_bar ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Morris;
+    font-size: 3vw;
+    color: black;
+    padding: 0% 0 0% 0;
+    border: 1px solid black;
+    margin: 0% 10%;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* On veut garder la sidebar pour la tablette as well */
+@media screen and (min-width: 768px) {
+    /* nav fixe hors de l'écran à gauche, se déplace en side bar gauche lors d'un clic sur flèche */
+    nav {
+        width: 20%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: #F3e2c5;
+        z-index: 98;
+        transition: ease-in-out 0.2s;
+    }
+
+    /* seulement pour pc et tablette */
+#title,
+#nav_opener {
+    display: block;
+}
+    #nav_bar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: unset;
+        height: 90%;
+    }
+
+    #logo_contain {
+        margin: 0 25%;
+        width: 50%;
+    }
+
+    #title {
+        text-align: center;
+        font-family: BlackChancery;
+        font-size: x-large;
+        color: black;
+    }
+
+    #nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 1vw;
+        flex-wrap: nowrap;
+    }
+
+    #nav_bar ul a {
+        width: 100%;
+        height: 18%;
+        padding: 3% 3%;
+        border: 1px solid black;
+        margin: 7.5% 0;
+        width: 100%;
+        border-radius: 30px;
+        font-size: 2vw;
+    }
+
+    #nav_bar ul a:hover {
+        background-color: var(--orange);
+        transition: 0.2s;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #nav_opener {
+        font-size: 5vw;
+        background-color: var(--blanc_casse); /* même fond que nav pour faire ressortir sur le fond du main */
+        display: block;
+        position: fixed; /* forcer le placement milieu vertical du bouton. */
+        top: 50vh;
+        left: -1.7%;
+        color: black;
+        border-radius: 40%;
+        cursor: pointer;
+        z-index: 100;
+        transition: ease-in-out 0.2s;
+    }
+
+    #nav_opener:hover {
+        background-color: var(--orange);
+        transition: 0.2s;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Format après clic du bouton flèche */
+    #nav.open {
+        left: 0%;
+        transition: ease-in-out.2s;
+    }
+
+    #nav_opener.open {
+        left: 17.5%;
+        transition: ease-in-out 0.2s;
+        transform: rotate(-180deg);
+    }
+}
+
+
+/* Pour les spécificités du header signedIn
+
+***********************
+Header Version SignedIn
+************************
+
+*/
+
+#signed-in{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#signed-in div{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 10%;
+}
+
+#signed-in div a{
+    width: 60%;
+    height: 80%;
+    align-items: center;
+    padding: 0% 15%;
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    #signed-in{
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    #signed-in div{
+        flex-direction: column;
+        width: 100%;
+        height: 40%;
+    }
+    #signed-in div a{
+        width: 100%;
+        height: 40%;
+        }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #signed-in {
+        margin: 8% 0;
+    }
+
+}

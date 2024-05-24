@@ -5,7 +5,7 @@
 /* Importation des polices */
 @import url(./commons/font.css);
 /* style header */
-@import url(./commons/styleHeader_signedIn.css);
+@import url(./commons/styleHeader.css);
 /* style footer */
 @import url(./commons/styleFooter.css);
 
@@ -36,8 +36,8 @@ main section, main form{
     background-repeat: no-repeat;
     background-size: 175%;
     background-position: center center;
-    margin: 6% 4%;
-    padding: 10% 0;
+    margin: 4% 4%;
+    padding: 4% 2%;
     display: flex;
     flex-direction: column;
     border-radius: 7vw;
@@ -103,14 +103,13 @@ main section, main form{
 
 .blocDescription{
     max-height: 3em;
-    overflow-y: scroll;
     margin: 2% 1%;
     padding: 1% 1%;
 }
 
 .sousTitre{
     font-family: Morris;
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-bottom: 3%;
     width: 100%;
     text-align: center;
@@ -168,9 +167,9 @@ p{
     }
     .lienForm{
         height: 0%;
-        font-size: 2em;
+        font-size: 1.5em;
         padding: 1% 1%;
-        width: 50%;
+        width: 40%;
     }
 
 }
@@ -185,12 +184,8 @@ p{
         align-items: center;
     }
 
-    .h1White{
-        font-size: 2em;
-    }
-
     #profile-container, #infosCompte{
-        margin: 4%;
+        margin: 2.5%;
         padding: 1% 1%;
         flex-direction: row;
         flex-wrap: wrap;
@@ -205,8 +200,8 @@ p{
         font-size: 1.1em;
     }
 
-    .blocInfo{
-        margin-bottom: 1%;
+    .blocInfo, .blocDescription{
+        margin: 0 0 1% 0;
         height: unset;
         padding: 1%;
     }
@@ -221,6 +216,7 @@ p{
         font-size: 1.5em;
         font-family: 'BlackChancery';
         text-align: center;
+        margin: 2.5%;
     }
 
     p{
@@ -250,15 +246,30 @@ p{
 
 textarea, input{
     font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 0.5%;
+    color: white
+}
+
+textarea::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 70%;
 }
 
 input{
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 
 main .lienForm:last-of-type{
     margin: 5% 25% 3% 25%;
+}
+
+@media screen and (min-width : 1024px){
+    main .lienForm:last-of-type{
+        margin: 1% 25% 1% 25%;
+    }
 }
 
 /***************************************************************************************************************
@@ -292,6 +303,14 @@ main .lienForm:last-of-type{
 
 #resultatRechercheDroite{
     display: none;
+}
+
+select{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 0.5%;
+    color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -389,6 +408,11 @@ main .lienForm:last-of-type{
         font-size: 1.5em;
     }
 
+    /* H1white sur la fin du code car touche plusieurs titres dans différentes page */
+    .h1White{
+        font-size: 1.5em;
+    }
+
     .sousTitre{
         font-size: 1.2em;
     }
@@ -429,5 +453,6 @@ main .lienForm:last-of-type{
         font-family: Morris;
         font-weight: bold;
     }
+
 
 }

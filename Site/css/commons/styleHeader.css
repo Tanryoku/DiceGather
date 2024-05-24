@@ -31,22 +31,6 @@ body {
     background-color: var(--marron);
 }
 
-nav {
-    width: 100%;
-    height: 15vw;
-    background-color: var(--blanc_casse);
-}
-
-#nav_bar {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-#title,#nav_opener {
-    display: none;
-}
-
 #logo_contain {
     width: 12%;
     height: auto;
@@ -59,187 +43,134 @@ nav {
     max-height: 100%;
     border-radius: 50px;
 }
+nav {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #F3e2c5;
+    z-index: 98;
+    transition: ease-in-out 0.2s;
+}
+
+#nav_bar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#logo_contain {
+    margin: 0 25%;
+    width: 50%;
+}
+
+#headerTitle {
+    text-align: center;
+    font-family: BlackChancery;
+    font-size: 2em;
+    color: black;
+    margin: 0 0;
+}
 
 #nav_bar ul {
     display: flex;
-    align-items: center;
-    width: 80%;
+    flex-direction: column;
     height: 100%;
-    margin: 0% 0; /* va à droite */
-    padding: 0 0;
+    padding: 4% 6%;
 }
 
 #nav_bar ul a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: Morris;
-    font-size: 3vw;
-    color: black;
-    padding: 0% 0 0% 0;
-    border: 1px solid black;
-    margin: 0% 10%;
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* On veut garder la sidebar pour la tablette as well */
-@media screen and (min-width: 768px) {
-    /* nav fixe hors de l'écran à gauche, se déplace en side bar gauche lors d'un clic sur flèche */
-    nav {
-        width: 20%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: -100%;
-        background-color: #F3e2c5;
-        z-index: 98;
-        transition: ease-in-out 0.2s;
-    }
-
-    /* seulement pour pc et tablette */
-#title,
-#nav_opener {
-    display: block;
-}
-    #nav_bar {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        width: unset;
-        height: 90%;
-    }
-
-    #logo_contain {
-        margin: 0 25%;
-        width: 50%;
-    }
-
-    #title {
-        text-align: center;
-        font-family: BlackChancery;
-        font-size: x-large;
-        color: black;
-    }
-
-    #nav_bar ul {
-        display: flex;
-        flex-direction: column;
-        font-size: 1vw;
-        flex-wrap: nowrap;
-    }
-
-    #nav_bar ul a {
-        width: 100%;
-        height: 18%;
-        padding: 3% 3%;
-        border: 1px solid black;
-        margin: 7.5% 0;
-        width: 100%;
-        border-radius: 30px;
-        font-size: 2vw;
-    }
-
-    #nav_bar ul a:hover {
-        background-color: var(--orange);
-        transition: 0.2s;
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    #nav_opener {
-        font-size: 5vw;
-        background-color: var(--blanc_casse); /* même fond que nav pour faire ressortir sur le fond du main */
-        display: block;
-        position: fixed; /* forcer le placement milieu vertical du bouton. */
-        top: 50vh;
-        left: -1.7%;
-        color: black;
-        border-radius: 40%;
-        cursor: pointer;
-        z-index: 100;
-        transition: ease-in-out 0.2s;
-    }
-
-    #nav_opener:hover {
-        background-color: var(--orange);
-        transition: 0.2s;
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Format après clic du bouton flèche */
-    #nav.open {
-        left: 0%;
-        transition: ease-in-out.2s;
-    }
-
-    #nav_opener.open {
-        left: 17.5%;
-        transition: ease-in-out 0.2s;
-        transform: rotate(-180deg);
-    }
-}
-
-
-/* Pour les spécificités du header signedIn
-
-***********************
-Header Version SignedIn
-************************
-
-*/
-
-#signed-in{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     width: 100%;
+    height: 15%;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    margin: 7.5% 0;
+    border-radius: 30px;
+    font-size: 6.5vw;
+    align-content: center;
 }
 
-#signed-in div{
-    display: flex;
-    width: 30%;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin: 0 10%;
+#nav_bar ul a:hover {
+    background-color: var(--orange);
+    transition: 0.2s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#signed-in div a{
-    width: 60%;
-    height: 80%;
-    align-items: center;
-    padding: 0% 15%;
+#nav_opener {
+    font-size: 14vw;
+    background-color: var(--blanc_casse); /* même fond que nav pour faire ressortir sur le fond du main */
+    display: block;
+    position: fixed; /* forcer le placement milieu vertical du bouton. */
+    top: 50vh;
+    left: -3vw;
+    color: black;
+    border-radius: 40%;
+    cursor: pointer;
+    z-index: 100;
+    transition: ease-in-out 0.2s;
 }
 
+#nav_opener:hover {
+    background-color: var(--orange);
+    transition: 0.2s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Format après clic du bouton flèche */
+#nav.open {
+    left: 0%;
+    transition: ease-in-out.2s;
+}
+
+#nav_opener.open {
+    left: 43.5%;
+    transition: ease-in-out 0.2s;
+    transform: rotate(-180deg);
+}
 
 @media screen and (min-width: 768px) {
-
-
-    #signed-in{
-        justify-content: space-between;
-        height: 100%;
+    #nav_opener{
+        font-size: 8vw;
+        left: -1%;
     }
 
-    #signed-in div{
-        flex-direction: column;
-        width: 100%;
-        height: 40%;
+    #nav_opener.open{
+        left: 31.5%;
     }
-    #signed-in div a{
-        width: 100%;
-        height: 40%;
-        }
+
+    #headerTitle{
+        font-size: 4em;
+    }
+
+    nav{
+    width: 35%;
+    }
+
+    #nav_bar ul a{
+        font-size: calc(2em + 0.3vw);
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
 
-    #signed-in {
-        margin: 8% 0;
+    nav{
+        width: 22%;
     }
 
+    #headerTitle{
+        font-size: 2em;
+    }
+    #nav_bar ul a {
+        font-size: 1.5em;
+    }
+
+    #nav_opener{
+        font-size: 5vw;
+    }
+    #nav_opener.open{
+        left: 19.5%;
+    }
 }
