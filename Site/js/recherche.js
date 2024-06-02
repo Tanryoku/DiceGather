@@ -7,7 +7,6 @@
     
     // Les blocs sont cachés, seul celui choisit dans le select apparait.
     playerFilters.classList.add('hidden');
-    console.log(categorySelect.value, tableFilters, playerFilters)
     
     categorySelect.addEventListener('change', () => {
         if (categorySelect.value === 'table') {
