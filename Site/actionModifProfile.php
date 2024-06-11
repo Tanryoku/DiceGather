@@ -7,10 +7,6 @@ session_start();
 
     // Je vérifie que les champs ne sont pas vides
     if(!empty($_POST)){
-
-        // Je vérifie que la session soit lié à un rôle MJ et que l'utilisateur soit bien MJ et j'enregistre son id_user dans la session (besoin pour requête SQL)
-        // if (){
-
         
             // Je me connecte à la BdD
             $connexion = new PDO($dsn, DBUSER, DBPASS);
