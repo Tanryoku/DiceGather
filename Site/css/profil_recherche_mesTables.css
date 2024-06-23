@@ -329,7 +329,7 @@ select{
     }
 
     #filter-container select{
-        height: 2em;
+        min-height: fit-content;
     }
 
     #player-filters, #table-filters{
