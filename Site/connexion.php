@@ -28,8 +28,6 @@ if(!empty($_POST)){
 
         if ($requete->execute()) {
             $user = $requete->fetch(PDO::FETCH_ASSOC);
-            var_dump($user);
-            var_dump($user['hash']);
         // Vérification du mot de passe
             if (password_verify($_POST["password"], $user['hash'] )) {
 

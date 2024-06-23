@@ -32,7 +32,7 @@ main{
 
 main section, main form{
     /* version 640px de l'image */
-    background-image: url(../assets/Img/parcho-profil_sml.jpg);
+    background-image: url(./assets/Img/parcho-profil_sml.jpg);
     background-repeat: no-repeat;
     background-size: 175%;
     background-position: center center;

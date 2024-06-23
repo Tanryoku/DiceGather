@@ -47,11 +47,11 @@ require_once("./PHP/BdD_login.php");
                 </div>
                 <h6 id="headerTitle">Dice Gather</h6>
                 <ul>
-                    <a href="profilJoueur.php">Profil</a>
-                    <a href="messagerie.php"> Messagerie</a>
-                    <a href="recherche.php"> Recherche</a>
-                    <a href="mesTables.php">Mes Tables</a>
-                    <a href="./include/log_out.php">Deconnexion</a>
+                    <li><a href="profilJoueur.php">Profil</a></li>
+                    <li><a href="messagerie.php"> Messagerie</a></li>
+                    <li><a href="recherche.php"> Recherche</a></li>
+                    <li><a href="mesTables.php">Mes Tables</a></li>
+                    <li><a href="./include/log_out.php">Deconnexion</a></li>
                 </ul>
             </section>
             <span id="nav_opener">&#8677;</span>
