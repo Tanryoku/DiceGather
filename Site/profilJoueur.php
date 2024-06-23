@@ -133,7 +133,9 @@ require_once("./PHP/BdD_login.php");
             
             <a href="EffacerUser.php" class="lienForm">Effacer mon compte</a>
         </section>
-        <a href="dashboard.php" class="lienForm">Retour</a>
+        <div class="liensFinDePage">
+                <a href="dashboard.php" class="lienForm">Retour</a>
+        </div>
     </main>
     <footer>
         <?php include('./include/footer.inc.php'); ?>

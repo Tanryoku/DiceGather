@@ -10,6 +10,10 @@
 @import url(./commons/styleFooter.css);
 
 
+.enConstruction{
+    
+}
+
 #messageSystem {
     width: 300px;
     margin: 0 auto;

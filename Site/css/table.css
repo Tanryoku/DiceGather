@@ -18,6 +18,10 @@
     --orange : #FFB11C;
 }
 
+.enConstruction{
+    
+}
+
 main, main form{
     display: flex;
     flex-direction: column;

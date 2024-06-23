@@ -14,7 +14,9 @@ session_start();
         <?php include('./include/header_signedIn.inc.php'); ?>
     </header>
     <main>
-        <section id="messageSystem">
+
+    <h1 class="enConstruction">Page en cours de construction</h1>
+        <!-- <section id="messageSystem">
             <h1>messagerie</h1>
             <ul id="tabs">
                 <li id="receivedTab">Received</li>
@@ -37,7 +39,7 @@ session_start();
                 <button id="sendButton">Send</button>
             </div>
         </section>
-            <script src="script.js"></script>
+        <script src="script.js"></script> -->
     </main>
     <footer>
         <?php include('./include/footer.inc.php'); ?>

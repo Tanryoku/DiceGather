@@ -18,11 +18,12 @@ session_start();
 </header>
 
 <main>
+    <h1 class="enConstruction">Page en cours de construction</h1>
         <!-- Squelette des blocs créés lorsque la BdD détecte une table de jeu lié à l'utilisateur -->
-        <section id="profile-recherche">
+        <!-- <section id="profile-recherche">
             <h1>Recherche</h1>
             <div class="profile-pic-container">
-                <!-- Récupérer l'URL de l'image déjà uploadé dans la BdD -->
+               Récupérer l'URL de l'image déjà uploadé dans la BdD
                 <img src="./assets/img/profile2.jpg" alt="Profile picture" id="profile-picture">
             </div>
     
@@ -55,7 +56,7 @@ session_start();
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </main>
 
 <footer>

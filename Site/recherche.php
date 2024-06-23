@@ -263,8 +263,10 @@ if (!empty($_POST)) {
                 </div>
             </section>
             <?php } ?>
+            <div class="liensFinDePage">
+                <a href="dashboard.php" class="lienForm">Retour</a>
+            </div>
 
-            <a href="dashboard.php" class="lienForm">Retour</a>
     </main>
 
     <footer>

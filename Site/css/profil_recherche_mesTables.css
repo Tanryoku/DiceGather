@@ -454,5 +454,11 @@ select{
         font-weight: bold;
     }
 
+    .liensFinDePage{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
 
 }

@@ -107,7 +107,9 @@ require_once("./PHP/BdD_login.php");
 
         <button type="submit"class="lienForm" >J'envoie les modifications</button>
     </form>
-    <a href="profilJoueur.php" class="lienForm" >Retour</a>
+    <div class="liensFinDePage">
+        <a href="dashboard.php" class="lienForm">Retour</a>
+    </div>
     </main>
     <footer>
         <?php include('./include/footer.inc.php'); ?>
